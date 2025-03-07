@@ -1,31 +1,73 @@
-import { SunIcon, MoonIcon, SepiaIcon, MonochromeIcon } from "@/Icons";
+import {
+  SunIcon,
+  MoonIcon,
+  SepiaIcon,
+  MonochromeIcon,
+  HomeIcon,
+  FolderIcon,
+  WrenchIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+} from "@/Icons";
+import * as Tabs from "@radix-ui/react-tabs";
 import { ThemeToggler } from "./ThemeToggler";
 
 export default function Navbar() {
   return (
-    <div>
-      <div className="flex justify-center items-center h-16">
-        <div className="items-center justifu-center flex bg-gray-600">
-          <ThemeToggler
-            themes={[
-              { theme: "light", icon: <SunIcon /> },
-              { theme: "dark", icon: <MoonIcon /> },
-              { theme: "sepia", icon: <SepiaIcon /> },
-              { theme: "monochrome", icon: <MonochromeIcon /> },
-            ]}
-          ></ThemeToggler>
+    <div className="p-10 items-center justify-center flex">
+      <Tabs.List
+        aria-label="tabs"
+        className="flex items-center justify-center space-x-4 bg-gray-500 p-4 py-2 w-fit rounded-xl"
+      >
+        <ThemeToggler
+          themes={[
+            { theme: "light", icon: <SunIcon /> },
+            { theme: "dark", icon: <MoonIcon /> },
+            { theme: "sepia", icon: <SepiaIcon /> },
+            { theme: "monochrome", icon: <MonochromeIcon /> },
+          ]}
+        ></ThemeToggler>
 
-          <a href="#" className="text-lg">
-            Home
-          </a>
-          <a href="#" className="text-lg">
-            About
-          </a>
-          <a href="#" className="text-lg">
-            Contact
-          </a>
-        </div>
-      </div>
+        <Tabs.Trigger
+          value="tab-home"
+          className="p-2 data-[state=active]:bg-gradient-to-br from-[#F97316] to-[#EAB308] rounded-lg"
+        >
+          {/* home */}
+          <HomeIcon />
+        </Tabs.Trigger>
+
+        <Tabs.Trigger
+          value="tab-projects"
+          className="p-2 data-[state=active]:bg-gradient-to-br from-[#F97316] to-[#EAB308] rounded-lg"
+        >
+          {/* Projects  */}
+          <FolderIcon />
+        </Tabs.Trigger>
+
+        <Tabs.Trigger
+          value="tab-tools"
+          className="p-2 data-[state=active]:bg-gradient-to-br from-[#F97316] to-[#EAB308] rounded-lg"
+        >
+          {/* Tools */}
+          <WrenchIcon />
+        </Tabs.Trigger>
+
+        <Tabs.Trigger
+          value="tab-experiences"
+          className="p-2 data-[state=active]:bg-gradient-to-br from-[#F97316] to-[#EAB308] rounded-lg"
+        >
+          {/* Experience */}
+          <BriefcaseIcon />
+        </Tabs.Trigger>
+
+        <Tabs.Trigger
+          value="tab-contacts"
+          className="p-2 data-[state=active]:bg-gradient-to-br from-[#F97316] to-[#EAB308] rounded-lg"
+        >
+          {/* Contact */}
+          <PhoneIcon />
+        </Tabs.Trigger>
+      </Tabs.List>
     </div>
   );
 }
