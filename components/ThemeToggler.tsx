@@ -28,7 +28,7 @@ const ThemeToggler: FunctionComponent<ThemeToggler> = ({
   };
 
   return (
-    <button className="p-2" onClick={handleClick}>
+    <button className="" onClick={handleClick}>
       {themes[currentIndex]?.icon ?? <PlaceholderIcon />}
     </button>
   );
