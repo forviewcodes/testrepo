@@ -1,5 +1,3 @@
-import exp from "constants";
-
 export * from "./MonochromeIcon";
 export * from "./MoonIcon";
 export * from "./SepiaIcon";
@@ -12,3 +10,7 @@ export * from "./FolderIcon";
 export * from "./BriefcaseIcon";
 export * from "./PhoneIcon";
 export * from "./WrenchIcon";
+export * from "./GitHubIcon";
+export * from "./LinkedInIcon";
+export * from "./MailIcon";
+export * from "./ResumeIcon";
