@@ -3,7 +3,7 @@ import { Button } from "./Button";
 
 export default function Avatar() {
   return (
-    <div className="h-[640px] w-[345px] bg-gray-300 rounded-xl flex flex-col justify-between p-8">
+    <div className="h-[640px] w-[345px] bg-gray-300 rounded-xl flex flex-col justify-between p-8 sticky top-10">
       <div className="items-center justify-center flex flex-col">
         <div className="h-[280px] w-[240px]  bg-black rounded-lg mb-6">
           my image

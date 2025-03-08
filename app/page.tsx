@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Tabs.Root defaultValue="tab-home" className="w-full">
         <Navbar></Navbar>
-        <div className="flex items-center justify-center">
+        <div className="flex justify-center">
           <Avatar></Avatar>
           <NavbarContents></NavbarContents>
         </div>
