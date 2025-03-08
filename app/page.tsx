@@ -5,7 +5,7 @@ import Avatar from "@/components/Avatar";
 
 export default function Home() {
   return (
-    <div className="container items-center justify-center flex">
+    <div className="container items-center justify-center flex font-display">
       <Tabs.Root defaultValue="tab-home" className="w-full">
         <Navbar></Navbar>
         <div className="flex justify-center space-x-20">

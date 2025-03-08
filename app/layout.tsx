@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/useTheme";
 import { clx } from "@/lib/utils";
@@ -11,6 +11,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
@@ -28,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clx(
-          `${geistSans.variable} ${geistMono.variable} antialiased`,
+          `${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`,
           "items-center justify-center flex"
         )}
       >

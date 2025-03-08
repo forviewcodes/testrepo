@@ -75,7 +75,7 @@ export const collabProjectsData = [
   {
     id: 2,
     title: "AskGovMy ",
-    description: "One Stop Center to Ask Govenment Questions",
+    description: "Malaysia Govenment QnA Hub",
     image: "/projects/2.png",
     tag: ["All", "Web"],
     gitHubUrl: "https://github.com/harrisazmi/Project3NumazuScraper",
@@ -84,7 +84,7 @@ export const collabProjectsData = [
   {
     id: 3,
     title: "Directory",
-    description: "One Directory for whole of Government",
+    description: "One Directory for whole Government",
     image: "/projects/3.png",
     tag: ["All", "Web"],
     gitHubUrl: "https://github.com/harrisazmi/Project1ToDoListFE",
