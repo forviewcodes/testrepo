@@ -13,7 +13,7 @@ export default function TabProjects() {
         Projects
       </h1>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-6">
         {collabProjectsData.map((projectsData, index) => (
           // <a href="https://www.google.com">
           <div
@@ -37,7 +37,7 @@ export default function TabProjects() {
         Projects
       </h1>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-6">
         {personalProjectsData.map((projectsData, index) => (
           <div
             key={index}
