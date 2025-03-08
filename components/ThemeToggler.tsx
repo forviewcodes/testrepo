@@ -28,7 +28,10 @@ const ThemeToggler: FunctionComponent<ThemeToggler> = ({
   };
 
   return (
-    <button className="" onClick={handleClick}>
+    <button
+      className="size-10 items-center justify-center flex"
+      onClick={handleClick}
+    >
       {themes[currentIndex]?.icon ?? <PlaceholderIcon />}
     </button>
   );
