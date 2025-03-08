@@ -21,7 +21,9 @@ const button_cva = cva(["rounded-md"], {
       "orange-primary-fill": ["bg-gradient-to-br from-[#F97316] to-[#EAB308] "],
       "orange-primary-outline": [],
       "orange-primary-ghost": [],
-      "icon-default": [""],
+      "icon-animated": [
+        "size-10 rounded-xl relative group overflow-hidden items-center justify-center flex shrink-0",
+      ],
       unset: null,
     },
 

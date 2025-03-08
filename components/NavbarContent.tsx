@@ -6,7 +6,7 @@ import TabHome from "./Tabs/TabHome";
 
 export default function NavbarContents() {
   return (
-    <div className="w-[660px] bg-red-600 mx-10">
+    <div className="w-[660px] bg-red-600 mx-10 ">
       <TabHome></TabHome>
       <TabProjects></TabProjects>
       <TabTools></TabTools>

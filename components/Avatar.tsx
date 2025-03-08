@@ -1,5 +1,6 @@
 import { GitHubIcon, LinkedInIcon, MailIcon, ResumeIcon } from "@/Icons";
 import { Button } from "./Button";
+import { IconAnimation } from "./IconAnimation";
 
 export default function Avatar() {
   return (
@@ -18,34 +19,25 @@ export default function Avatar() {
           </div>
         </div>
 
-        <div className="space-x-4 py-4">
-          <Button
-            className="hover:bg-gradient-to-br from-[#F97316] to-[#EAB308]"
-            variant={"default-ghost"}
-            iconOnly
-          >
-            <MailIcon></MailIcon>
+        <div className="space-x-4 py-4 flex">
+          <Button variant="icon-animated">
+            <MailIcon className="relative z-10 shrink-0" />
+            <IconAnimation />
           </Button>
-          <Button
-            className="hover:bg-gradient-to-br from-[#F97316] to-[#EAB308]"
-            variant={"default-ghost"}
-            iconOnly
-          >
-            <LinkedInIcon></LinkedInIcon>
+
+          <Button variant="icon-animated">
+            <LinkedInIcon className="relative z-10 shrink-0" />
+            <IconAnimation />
           </Button>
-          <Button
-            className="hover:bg-gradient-to-br from-[#F97316] to-[#EAB308]"
-            variant={"default-ghost"}
-            iconOnly
-          >
-            <GitHubIcon></GitHubIcon>
+
+          <Button variant="icon-animated">
+            <GitHubIcon className="relative z-10 shrink-0" />
+            <IconAnimation />
           </Button>
-          <Button
-            className="hover:bg-gradient-to-br from-[#F97316] to-[#EAB308]"
-            variant={"default-ghost"}
-            iconOnly
-          >
-            <ResumeIcon></ResumeIcon>
+
+          <Button variant="icon-animated">
+            <ResumeIcon className="relative z-10 shrink-0" />
+            <IconAnimation />
           </Button>
         </div>
       </div>
