@@ -5,10 +5,10 @@ import Avatar from "@/components/Avatar";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container items-center justify-center flex">
       <Tabs.Root defaultValue="tab-home" className="w-full">
         <Navbar></Navbar>
-        <div className="flex justify-center">
+        <div className="flex justify-center space-x-20">
           <Avatar></Avatar>
           <NavbarContents></NavbarContents>
         </div>
