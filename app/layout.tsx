@@ -34,10 +34,16 @@ export default function RootLayout({
       <body
         className={clx(
           `${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`,
-          "items-center justify-center flex"
+          "items-center justify-center flex flex-col"
         )}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <div>Navbar</div>
+          <div className="flex">
+            <div>Avatar</div>
+            <div>{children}</div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
