@@ -47,16 +47,25 @@ export default function TabProjects() {
 
       <div className="grid grid-cols-2 gap-6">
         {personalProjectsData.map((projectsData, index) => (
-          <div
-            key={index}
-            className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
-          >
-            <div key={index} className="w-[320px] h-[230px] bg-red-400"></div>
-            <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
-              <h3 className="font-bold text-2xl">{projectsData.title}</h3>
-              <p>{projectsData.description}</p>
+          <Link key={index} href={`/projects/${projectsData.path}`}>
+            <div
+              key={index}
+              className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
+            >
+              <Image
+                key={index}
+                src={projectsData.image}
+                alt={projectsData.title}
+                width={320}
+                height={230}
+                quality={100}
+              />
+              <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
+                <h3 className="font-bold text-2xl">{projectsData.title}</h3>
+                <p>{projectsData.description}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>
