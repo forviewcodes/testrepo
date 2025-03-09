@@ -2,6 +2,7 @@
 import { collabProjectsData } from "@/data/ProjectsData";
 import { personalProjectsData } from "@/data/ProjectsData";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TabProjects() {
   return (
@@ -20,7 +21,14 @@ export default function TabProjects() {
               key={index}
               className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
             >
-              <div key={index} className="w-[320px] h-[220px] bg-red-400"></div>
+              <Image
+                key={index}
+                src={projectsData.image}
+                alt={projectsData.title}
+                width={320}
+                height={230}
+                quality={100}
+              />
               <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
                 <h3 className="font-bold text-2xl">{projectsData.title}</h3>
                 <p>{projectsData.description}</p>
@@ -43,7 +51,7 @@ export default function TabProjects() {
             key={index}
             className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
           >
-            <div key={index} className="w-[320px] h-[220px] bg-red-400"></div>
+            <div key={index} className="w-[320px] h-[230px] bg-red-400"></div>
             <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
               <h3 className="font-bold text-2xl">{projectsData.title}</h3>
               <p>{projectsData.description}</p>
