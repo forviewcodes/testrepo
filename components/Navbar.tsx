@@ -1,35 +1,36 @@
 "use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { clx } from "@/lib/utils";
+
 import {
-  SunIcon,
-  MoonIcon,
-  SepiaIcon,
-  MonochromeIcon,
   HomeIcon,
   FolderIcon,
   WrenchIcon,
   BriefcaseIcon,
   PhoneIcon,
+  MonochromeIcon,
+  MoonIcon,
+  SepiaIcon,
+  SunIcon,
 } from "@/Icons";
-import * as Tabs from "@radix-ui/react-tabs";
-import { ThemeToggler } from "./ThemeToggler";
-import { clx } from "@/lib/utils";
 import { IconAnimation } from "./IconAnimation";
+import { ThemeToggler } from "./ThemeToggler";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const tabs = [
-    { value: "tab-home", icon: <HomeIcon /> },
-    { value: "tab-projects", icon: <FolderIcon /> },
-    { value: "tab-tools", icon: <WrenchIcon /> },
-    { value: "tab-experiences", icon: <BriefcaseIcon /> },
-    { value: "tab-contacts", icon: <PhoneIcon /> },
+    { href: "/home", label: "Home", icon: <HomeIcon /> },
+    { href: "/projects", label: "Projects", icon: <FolderIcon /> },
+    { href: "/tools", label: "Tools", icon: <WrenchIcon /> },
+    { href: "/experiences", label: "Experiences", icon: <BriefcaseIcon /> },
+    { href: "/contacts", label: "Contacts", icon: <PhoneIcon /> },
   ];
 
   return (
     <div className="p-10 items-center justify-center flex">
-      <Tabs.List
-        aria-label="tabs"
-        className="flex items-center justify-between bg-gray-500 p-4 py-2 rounded-xl "
-      >
+      <div className="flex items-center justify-between bg-gray-500 p-4 py-2 rounded-xl gap-2">
         <ThemeToggler
           themes={[
             { theme: "light", icon: <SunIcon /> },
@@ -39,20 +40,22 @@ export default function Navbar() {
           ]}
         ></ThemeToggler>
 
-        {tabs.map(({ value, icon }) => (
-          <Tabs.Trigger
-            key={value}
-            value={value}
+        {tabs.map((tab) => (
+          <Link
+            key={tab.href}
+            href={tab.href}
             className={clx(
               "p-2 rounded-xl relative group overflow-hidden",
-              "data-[state=active]:bg-gradient-to-br from-[#F97316] to-[#EAB308]"
+              pathname === tab.href
+                ? "bg-gradient-to-br from-[#F97316] to-[#EAB308]"
+                : ""
             )}
           >
-            <div className="relative z-10">{icon}</div>
+            <div className="relative z-10">{tab.icon}</div>
             <IconAnimation />
-          </Tabs.Trigger>
+          </Link>
         ))}
-      </Tabs.List>
+      </div>
     </div>
   );
 }

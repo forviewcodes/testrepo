@@ -3,17 +3,8 @@ import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/useTheme";
 import { clx } from "@/lib/utils";
-import Tabs from "@/components/Navbar2";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Avatar from "@/components/Avatar";
+import Navbar from "@/components/Navbar";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -34,16 +25,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clx(
-          `${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`,
-          "items-center justify-center flex flex-col"
+          `${outfit.variable} antialiased`,
+          "items-center justify-center flex flex-col font-outfit"
         )}
       >
         <ThemeProvider>
-          <div>Navbar</div>
-          <Tabs></Tabs>
-          <div className="flex">
-            <div>Avatar</div>
-            <div>{children}</div>
+          <Navbar></Navbar>
+          <div className="flex justify-center gap-x-20 ">
+            <Avatar />
+            <div className="w-[660px] bg-red-500">{children}</div>
           </div>
         </ThemeProvider>
       </body>

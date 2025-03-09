@@ -4,7 +4,7 @@
 @import "./theme/monochrome.css";
 
 @theme {
-  --font-display: "Outfit", "sans-serif";
+  --font-outfit: "Outfit", "sans-serif";
   /* color white */
   --color-white: rgb(255, 255, 255);
   --color-white-true: rgb(255, 255, 255);
@@ -46,7 +46,6 @@
 body {
   color: var(--color-black);
   background: var(--color-white);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {

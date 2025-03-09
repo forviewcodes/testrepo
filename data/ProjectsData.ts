@@ -65,6 +65,7 @@ export const collabProjectsData = [
   {
     id: 1,
     title: "MYDS",
+    path: "myds",
     description: "Malaysia Government Design System",
     image: "/projects/1.png",
     tag: ["All", "Web"],
@@ -75,6 +76,7 @@ export const collabProjectsData = [
   {
     id: 2,
     title: "AskGovMy ",
+    path: "askgovmy",
     description: "Malaysia Govenment QnA Hub",
     image: "/projects/2.png",
     tag: ["All", "Web"],
@@ -84,6 +86,7 @@ export const collabProjectsData = [
   {
     id: 3,
     title: "Directory",
+    path: "directory",
     description: "One Directory for whole Government",
     image: "/projects/3.png",
     tag: ["All", "Web"],
