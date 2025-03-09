@@ -33,7 +33,7 @@ export default function RootLayout({
           <Navbar></Navbar>
           <div className="flex justify-center gap-x-20 ">
             <Avatar />
-            <div className="w-[660px]">{children}</div>
+            <div className="w-[660px] bg-red-300">{children}</div>
           </div>
         </ThemeProvider>
       </body>

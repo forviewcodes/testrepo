@@ -38,7 +38,7 @@ export default function Navbar() {
             { theme: "sepia", icon: <SepiaIcon /> },
             { theme: "monochrome", icon: <MonochromeIcon /> },
           ]}
-        ></ThemeToggler>
+        />
 
         {tabs.map((tab) => (
           <Link
@@ -46,7 +46,7 @@ export default function Navbar() {
             href={tab.href}
             className={clx(
               "p-2 rounded-xl relative group overflow-hidden",
-              pathname === tab.href
+              pathname.startsWith(tab.href)
                 ? "bg-gradient-to-br from-[#F97316] to-[#EAB308]"
                 : ""
             )}

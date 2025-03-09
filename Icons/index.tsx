@@ -14,3 +14,5 @@ export * from "./GitHubIcon";
 export * from "./LinkedInIcon";
 export * from "./MailIcon";
 export * from "./ResumeIcon";
+export * from "./ArrowLeftIcon";
+export * from "./BroadcastIcon";
