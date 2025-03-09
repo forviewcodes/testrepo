@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/useTheme";
 import { clx } from "@/lib/utils";
+import Tabs from "@/components/Navbar2";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div>Navbar</div>
+          <Tabs></Tabs>
           <div className="flex">
             <div>Avatar</div>
             <div>{children}</div>
