@@ -41,7 +41,7 @@ export const personalProjectsData = [
   {
     id: 5,
     title: "Terraform: Proxmox",
-    path: "hometerraform",
+    path: "terraformproxmox",
     description: "Automating HomeLab Server",
     image: "/projects/personal/5.png",
     gitHubUrl: "/",
@@ -50,7 +50,7 @@ export const personalProjectsData = [
   {
     id: 6,
     title: "Terraform : AWS",
-    path: "cloudterraform",
+    path: "terraformaws",
     description:
       "Infrastructure as Code (IaC) for automating AWS resource provisioning",
     image: "/projects/personal/6.png",

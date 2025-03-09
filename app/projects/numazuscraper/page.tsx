@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import { ArrowLeftIcon, BroadcastIcon, GitHubIcon } from "@/Icons";
 import Link from "next/link";
 
-export default function NumazuDataScraper() {
+export default function NumazuScraper() {
   return (
     <div>
       <Link href="/projects">
