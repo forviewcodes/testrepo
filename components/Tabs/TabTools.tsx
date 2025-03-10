@@ -8,6 +8,7 @@ const categories = [
   { type: "backend", label: "Backend" },
   { type: "database", label: "Database" },
   { type: "devops", label: "Dev Ops" },
+  { type: "management", label: "Management" },
   { type: "others", label: "Others" },
 ];
 
@@ -20,7 +21,7 @@ function ToolsSection({ type, label }: ToolSectionProps) {
   const filteredTools = ToolsImages.filter((tool) => tool.type === type);
 
   return (
-    <div className="p-10 pt-0">
+    <div className="p-10 pt-0 pl-0">
       <h1 className="text-6xl font-bold pb-4">
         <span className="bg-gradient-to-br from-[#F97316] to-[#EAB308] bg-clip-text text-transparent">
           {label}
