@@ -1,10 +1,28 @@
 import { GitHubIcon, LinkedInIcon, MailIcon, ResumeIcon } from "@/Icons";
 import { Button } from "./Button";
 import { IconAnimation } from "./IconAnimation";
+import { clx } from "@/lib/utils";
+import Link from "next/link";
+import { IconInfo } from "./IconInfo";
 
 export default function Avatar() {
+  const tabs = [
+    { href: "https://www.github.com", label: "Github", icon: <GitHubIcon /> },
+    {
+      href: "https://www.linkedin.com",
+      label: "LinkedIn",
+      icon: <LinkedInIcon />,
+    },
+    {
+      href: "mailto:test@gmail.com?subject=Hello&body=How%20are%20you?",
+      label: "Mail",
+      icon: <MailIcon />,
+    },
+    { href: "/experiences", label: "Resume", icon: <ResumeIcon /> },
+  ];
+
   return (
-    <div className="h-[640px] w-[345px] bg-gray-300 rounded-xl flex flex-col justify-between p-8 sticky top-10">
+    <div className="h-[640px] w-[345px] bg-gray-400 rounded-xl flex flex-col justify-between p-8 sticky top-10">
       <div className="items-center justify-center flex flex-col">
         <div className="h-[280px] w-[240px]  bg-black rounded-lg mb-6">
           my image
@@ -20,25 +38,21 @@ export default function Avatar() {
         </div>
 
         <div className="space-x-4 py-4 flex">
-          <Button variant="icon-animated">
-            <MailIcon className="relative z-10 shrink-0" />
-            <IconAnimation />
-          </Button>
-
-          <Button variant="icon-animated">
-            <LinkedInIcon className="relative z-10 shrink-0" />
-            <IconAnimation />
-          </Button>
-
-          <Button variant="icon-animated">
-            <GitHubIcon className="relative z-10 shrink-0" />
-            <IconAnimation />
-          </Button>
-
-          <Button variant="icon-animated">
-            <ResumeIcon className="relative z-10 shrink-0" />
-            <IconAnimation />
-          </Button>
+          {tabs.map((tab) => (
+            <Link
+              key={tab.href}
+              href={tab.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={clx("p-2 rounded-xl relative group overflow-visible")}
+            >
+              <div className="relative z-10 flex items-center">{tab.icon}</div>
+              <IconAnimation />
+              <IconInfo className="border border-black top-11">
+                {tab.label}
+              </IconInfo>
+            </Link>
+          ))}
         </div>
       </div>
       <div className="items-center justify-center flex">

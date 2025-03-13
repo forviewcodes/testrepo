@@ -45,7 +45,7 @@ function ToolsSection({ type, label }: ToolSectionProps) {
         {filteredTools.map((tool) => (
           <div
             key={tool.name}
-            className="bg-gray-300 rounded-lg flex items-center"
+            className="bg-gray-400 rounded-lg flex items-center"
           >
             <div className="p-4">
               <Image

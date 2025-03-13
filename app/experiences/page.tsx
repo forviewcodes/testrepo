@@ -11,7 +11,7 @@ export default function ExperiencesPage() {
       </h1>
       <div className="gap-4 flex flex-col">
         <Link href="/experiences/govtech">
-          <div className="bg-gray-300 w-[650px] h-auto rounded-2xl flex justify-between p-6">
+          <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
             <div>
               <div className="text-4xl font-semibold">GovTech</div>
               <div className="py-4 text-lg">
@@ -25,7 +25,7 @@ export default function ExperiencesPage() {
           </div>
         </Link>
         <Link href="/experiences/bateriku">
-          <div className="bg-gray-300 w-[650px] h-auto rounded-2xl flex justify-between p-6">
+          <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
             <div>
               <div className="text-4xl font-semibold">Bateriku</div>
               <div className="py-4 text-lg">
@@ -39,7 +39,7 @@ export default function ExperiencesPage() {
           </div>
         </Link>
         <Link href="/experiences/chemiz">
-          <div className="bg-gray-300 w-[650px] h-auto rounded-2xl flex justify-between p-6">
+          <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
             <div>
               <div className="text-4xl font-semibold">Chemiz</div>
               <div className="py-4 text-lg">
