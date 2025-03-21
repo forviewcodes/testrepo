@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { collabProjectsData, personalProjectsData } from "@/data/ProjectsData";
 
-export default function TabProject() {
+export default function ProjectsPage() {
   return (
     <>
       <h1 className="text-6xl font-bold pb-4">
