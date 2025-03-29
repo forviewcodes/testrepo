@@ -1,24 +1,23 @@
 export const ExpInfo = [
   {
-    company: "Chemiz",
-    description: "yeah",
-    period: "June 2020 - Present",
+    name: "GovTech",
+    details:
+      "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement.",
+    year: "Jan 2020 - Present",
+    href: "/experiences/govtech",
   },
   {
-    company: "Bateriku",
-    description: "yeah",
-    period: "June 2020 - Present",
+    name: "Bateriku",
+    details:
+      "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement.",
+    year: "Jan 2020 - Present",
+    href: "/experiences/bateriku",
   },
   {
-    company: "GovTech",
-    description: "yeah",
-    period: "June 2020 - Present",
+    name: "Chemiz",
+    details:
+      "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement.",
+    year: "Jan 2020 - Present",
+    href: "/experiences/chemiz",
   },
-];
-
-export const ExpInfoExtended = [
-  { overview: "hehe", Role: "hehe", Skills: "hehe", Impact: "hehe" },
-  { overview: "hehe", Role: "hehe", Skills: "hehe", Impact: "hehe" },
-  { overview: "hehe", Role: "hehe", Skills: "hehe", Impact: "hehe" },
-  { overview: "hehe", Role: "hehe", Skills: "hehe", Impact: "hehe" },
 ];

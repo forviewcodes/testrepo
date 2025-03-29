@@ -1,7 +1,19 @@
+"use client";
 import { HomeIcon } from "@/Icons";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { ExpInfo } from "@/data/ExpInfo";
 
 export default function ExperiencesPage() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
     <div>
       <h1 className="text-6xl font-bold pb-8">
@@ -9,50 +21,27 @@ export default function ExperiencesPage() {
           Experiences
         </span>
       </h1>
-      <div className="gap-4 flex flex-col">
-        <Link href="/experiences/govtech">
-          <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
-            <div>
-              <div className="text-4xl font-semibold">GovTech</div>
-              <div className="py-4 text-lg">
-                Led the design team in creating user-centric mobile and web
-                applications, improving the user experience and increasing user
-                engagement.
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
+        transition={{ duration: 0.3, delay: 0.2 }}
+      >
+        <div ref={ref} className="gap-4 flex flex-col">
+          {ExpInfo.map((exp, index) => (
+            <Link key={index} href={exp.href}>
+              <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
+                <div>
+                  <div className="text-4xl font-semibold">{exp.name}</div>
+                  <div className="py-4 text-lg">{exp.details}</div>
+                  <div>{exp.year}</div>
+                </div>
+                <HomeIcon className="shrink-0"></HomeIcon>
               </div>
-              <div>Jan 2020 - Present</div>
-            </div>
-            <HomeIcon className="shrink-0"></HomeIcon>
-          </div>
-        </Link>
-        <Link href="/experiences/bateriku">
-          <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
-            <div>
-              <div className="text-4xl font-semibold">Bateriku</div>
-              <div className="py-4 text-lg">
-                Led the design team in creating user-centric mobile and web
-                applications, improving the user experience and increasing user
-                engagement.
-              </div>
-              <div>Jan 2020 - Present</div>
-            </div>
-            <HomeIcon className="shrink-0"></HomeIcon>
-          </div>
-        </Link>
-        <Link href="/experiences/chemiz">
-          <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
-            <div>
-              <div className="text-4xl font-semibold">Chemiz</div>
-              <div className="py-4 text-lg">
-                Led the design team in creating user-centric mobile and web
-                applications, improving the user experience and increasing user
-                engagement.
-              </div>
-              <div>Jan 2020 - Present</div>
-            </div>
-            <HomeIcon className="shrink-0"></HomeIcon>
-          </div>
-        </Link>
-      </div>
+            </Link>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }

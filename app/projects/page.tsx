@@ -6,8 +6,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 export default function ProjectsPage() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const collabRef = useRef(null);
+  const personalRef = useRef(null);
+  const isCollabInView = useInView(collabRef, { once: true });
+  const isPersonalInView = useInView(personalRef, { once: true });
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -23,22 +25,18 @@ export default function ProjectsPage() {
         Projects
       </h1>
 
-      <div ref={ref} className="grid grid-cols-2 gap-6">
+      <div ref={collabRef} className="grid grid-cols-2 gap-6">
         {collabProjectsData.map((projectsData, index) => (
           <motion.div
             key={index}
             variants={cardVariants}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            animate={isCollabInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.2 }}
           >
-            <Link key={index} href={`/projects/${projectsData.path}`}>
-              <div
-                key={index}
-                className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
-              >
+            <Link href={`/projects/${projectsData.path}`}>
+              <div className="size-[320px] bg-gray-300 rounded-3xl overflow-clip">
                 <Image
-                  key={index}
                   src={projectsData.image}
                   alt={projectsData.title}
                   width={320}
@@ -62,22 +60,18 @@ export default function ProjectsPage() {
         Projects
       </h1>
 
-      <div ref={ref} className="grid grid-cols-2 gap-6">
+      <div ref={personalRef} className="grid grid-cols-2 gap-6">
         {personalProjectsData.map((projectsData, index) => (
           <motion.div
             key={index}
             variants={cardVariants}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            animate={isPersonalInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.2 }}
           >
-            <Link key={index} href={`/projects/${projectsData.path}`}>
-              <div
-                key={index}
-                className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
-              >
+            <Link href={`/projects/${projectsData.path}`}>
+              <div className="size-[320px] bg-gray-300 rounded-3xl overflow-clip">
                 <Image
-                  key={index}
                   src={projectsData.image}
                   alt={projectsData.title}
                   width={320}

@@ -1,7 +1,25 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function Home() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
-    <>
-      <div className="flex flex-col items-start space-y-6">
+    <motion.div
+      variants={cardVariants}
+      initial="initial"
+      animate={isInView ? "animate" : "initial"}
+      transition={{ duration: 0.3, delay: 0.2 }}
+    >
+      <div ref={ref} className="flex flex-col items-start space-y-6">
         <h1 className="text-4xl font-extrabold">
           Developing Solutions,
           <br /> Creating Opportunities
@@ -35,6 +53,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }

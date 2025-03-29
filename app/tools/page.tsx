@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import { ToolsImages } from "@/data/ProjectsData";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function TabTools() {
   return (
@@ -32,35 +35,50 @@ interface ToolSectionProps {
 }
 
 function ToolsSection({ type, label }: ToolSectionProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   const filteredTools = ToolsImages.filter((tool) => tool.type === type);
 
   return (
-    <div className="p-10 pt-0 pl-0">
-      <h1 className="text-6xl font-bold pb-4">
-        <span className="bg-gradient-to-br from-[#F97316] to-[#EAB308] bg-clip-text text-transparent">
-          {label}
-        </span>
-      </h1>
-      <div className="grid grid-cols-2 gap-4">
-        {filteredTools.map((tool) => (
-          <div
-            key={tool.name}
-            className="bg-gray-400 rounded-lg flex items-center"
-          >
-            <div className="p-4">
-              <Image
-                src={tool.path}
-                alt={tool.name}
-                width={60}
-                height={60}
-                quality={100}
-                className="rounded-lg"
-              />
+    <div ref={ref} className="p-10 pt-0 pl-0">
+      <motion.div
+        variants={cardVariants}
+        initial="initial"
+        animate={isInView ? "animate" : "initial"}
+        transition={{ duration: 0.3, delay: 0.2 }}
+      >
+        <h1 className="text-6xl font-bold pb-4">
+          <span className="bg-gradient-to-br from-[#F97316] to-[#EAB308] bg-clip-text text-transparent">
+            {label}
+          </span>
+        </h1>
+        <div className="grid grid-cols-2 gap-4">
+          {filteredTools.map((tool) => (
+            <div
+              key={tool.name}
+              className="bg-gray-400 rounded-lg flex items-center"
+            >
+              <div className="p-4">
+                <Image
+                  src={tool.path}
+                  alt={tool.name}
+                  width={60}
+                  height={60}
+                  quality={100}
+                  className="rounded-lg"
+                />
+              </div>
+              {tool.name}
             </div>
-            {tool.name}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }
