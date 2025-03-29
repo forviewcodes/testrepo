@@ -3,6 +3,7 @@ import { Button } from "./Button";
 import { IconAnimation } from "./IconAnimation";
 import { clx } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 import { IconInfo } from "./IconInfo";
 
 export default function Avatar() {
@@ -24,8 +25,13 @@ export default function Avatar() {
   return (
     <div className="h-[640px] w-[345px] bg-gray-400 rounded-xl flex flex-col justify-between p-8 sticky top-10">
       <div className="items-center justify-center flex flex-col">
-        <div className="h-[280px] w-[240px]  bg-black rounded-lg mb-6">
-          my image
+        <div className="h-[280px] w-[240px]  bg-black rounded-lg mb-6 overflow-clip">
+          <Image
+            src={"/avatar/avatar.png"}
+            alt={"avatar"}
+            width={240}
+            height={280}
+          ></Image>
         </div>
         <div className="flex flex-col items-start space-y-1 text-gray-900 dark:text-white">
           <div className="text-center text-black">
