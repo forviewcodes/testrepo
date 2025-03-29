@@ -92,58 +92,86 @@ export const collabProjectsData = [
 
 export const ToolsImages = [
   //Language
-  { name: "C++", path: "/tools/languages/1.png", type: "languages" },
-  { name: "Javascript", path: "/tools/languages/2.png", type: "languages" },
-  { name: "Python", path: "/tools/languages/3.png", type: "languages" },
-  { name: "TypeScript", path: "/tools/languages/4.png", type: "languages" },
+  { name: "C++", path: "/tools/languages/cpp.png", type: "languages" },
+  {
+    name: "Javascript",
+    path: "/tools/languages/javascript.png",
+    type: "languages",
+  },
+  { name: "Python", path: "/tools/languages/python.png", type: "languages" },
+  {
+    name: "TypeScript",
+    path: "/tools/languages/typescript.png",
+    type: "languages",
+  },
 
   //Fullstack
-  { name: "NextJs", path: "/tools/fullstack/1.png", type: "fullstack" },
+  { name: "NextJs", path: "/tools/fullstack/nextjs.png", type: "fullstack" },
 
   //Frontend
-  { name: "HTML5", path: "/tools/frontend/1.png", type: "frontend" },
-  { name: "CSS3", path: "/tools/frontend/2.png", type: "frontend" },
-  { name: "TailwindCSS", path: "/tools/frontend/3.png", type: "frontend" },
-  { name: "React", path: "/tools/frontend/4.png", type: "frontend" },
-  { name: "Vite", path: "/tools/frontend/5.png", type: "frontend" },
-  { name: "jQuery", path: "/tools/frontend/6.png", type: "frontend" },
+  { name: "HTML5", path: "/tools/frontend/html.png", type: "frontend" },
+  { name: "CSS3", path: "/tools/frontend/css.png", type: "frontend" },
+  {
+    name: "TailwindCSS",
+    path: "/tools/frontend/tailwind.png",
+    type: "frontend",
+  },
+  { name: "React", path: "/tools/frontend/react.png", type: "frontend" },
+  { name: "Vite", path: "/tools/frontend/vite.png", type: "frontend" },
+  { name: "jQuery", path: "/tools/frontend/jquery.png", type: "frontend" },
 
   //Backend
-  { name: "Node.js", path: "/tools/backend/1.png", type: "backend" },
-  { name: "Express.js", path: "/tools/backend/2.png", type: "backend" },
-  { name: "Mongoose", path: "/tools/backend/3.png", type: "backend" },
-  { name: "Puppeteer", path: "/tools/backend/4.png", type: "backend" },
+  { name: "Node.js", path: "/tools/backend/nodejs.png", type: "backend" },
+  { name: "Express.js", path: "/tools/backend/expressjs.png", type: "backend" },
+  { name: "Mongoose", path: "/tools/backend/mongoose.png", type: "backend" },
+  { name: "Puppeteer", path: "/tools/backend/puppeteer.png", type: "backend" },
 
   //Database
-  { name: "MongoDB", path: "/tools/database/1.png", type: "database" },
-  { name: "MySQL", path: "/tools/database/2.png", type: "database" },
-  { name: "Oracle Database", path: "/tools/database/3.png", type: "database" },
-  { name: "SQL", path: "/tools/database/4.png", type: "database" },
-  { name: "Oracle PL/SQL", path: "/tools/database/5.png", type: "database" },
-  { name: "PostgreSQLs", path: "/tools/database/6.png", type: "database" },
-  { name: "Elastic Search", path: "/tools/database/7.png", type: "database" },
+  { name: "MongoDB", path: "/tools/database/mongodb.png", type: "database" },
+  { name: "MySQL", path: "/tools/database/mysql.png", type: "database" },
+  {
+    name: "Oracle Database",
+    path: "/tools/database/oracle.png",
+    type: "database",
+  },
+  { name: "SQL", path: "/tools/database/sql.png", type: "database" },
+  {
+    name: "Oracle PL/SQL",
+    path: "/tools/database/oracleplsql.png",
+    type: "database",
+  },
+  {
+    name: "PostgreSQLs",
+    path: "/tools/database/postgres.png",
+    type: "database",
+  },
+  {
+    name: "Elastic Search",
+    path: "/tools/database/elasticsearch.png",
+    type: "database",
+  },
 
   //Devops used
-  { name: "Docker", path: "/tools/devops/1.png", type: "devops" },
-  { name: "DockerHub", path: "/tools/devops/2.png", type: "devops" },
-  { name: "Spinnaker", path: "/tools/devops/3.png", type: "devops" },
-  { name: "GitHubActions", path: "/tools/devops/4.png", type: "devops" },
-  { name: "Kubernetes", path: "/tools/devops/5.png", type: "devops" },
+  { name: "Docker", path: "/tools/devops/docker.png", type: "devops" },
+  { name: "DockerHub", path: "/tools/devops/dockerhub.png", type: "devops" },
+  { name: "Spinnaker", path: "/tools/devops/spinnaker.png", type: "devops" },
+  { name: "GitHubActions", path: "/tools/devops/gha.png", type: "devops" },
+  { name: "Kubernetes", path: "/tools/devops/k8s.png", type: "devops" },
   {
     name: "Linux Container (LXC)",
-    path: "/tools/devops/6.png",
+    path: "/tools/devops/lxc.png",
     type: "devops",
   },
-  { name: "Portainer", path: "/tools/devops/7.png", type: "devops" },
-  { name: "Proxmox", path: "/tools/devops/8.png", type: "devops" },
-  { name: "ESXI", path: "/tools/devops/9.png", type: "devops" },
-  { name: "Ubuntu LTS", path: "/tools/devops/10.png", type: "devops" },
-  { name: "Nginx", path: "/tools/devops/11.png", type: "devops" },
-  { name: "Cloudflare", path: "/tools/devops/12.png", type: "devops" },
-  { name: "Terraform", path: "/tools/devops/13.png", type: "devops" },
+  { name: "Portainer", path: "/tools/devops/portainer.png", type: "devops" },
+  { name: "Proxmox", path: "/tools/devops/proxmox.png", type: "devops" },
+  { name: "ESXI", path: "/tools/devops/esxi.png", type: "devops" },
+  { name: "Ubuntu LTS", path: "/tools/devops/ubuntu.png", type: "devops" },
+  { name: "Nginx", path: "/tools/devops/nginx.png", type: "devops" },
+  { name: "Cloudflare", path: "/tools/devops/cloudflare.png", type: "devops" },
+  { name: "Terraform", path: "/tools/devops/terraform.png", type: "devops" },
 
-  { name: "AWS", path: "/tools/devops/14.png", type: "devops" },
-  { name: "AWS ECS", path: "/tools/devops/15.png", type: "devops" },
+  { name: "AWS", path: "/tools/devops/aws.png", type: "devops" },
+  { name: "AWS ECR", path: "/tools/devops/awsecr.png", type: "devops" },
 
   //Next Version Bump
   // { name: "Ansible", path: "/tools/devops/13.png", type: "devops" },
