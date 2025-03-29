@@ -1,8 +1,19 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { collabProjectsData, personalProjectsData } from "@/data/ProjectsData";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function ProjectsPage() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
     <>
       <h1 className="text-6xl font-bold pb-4">
@@ -12,27 +23,35 @@ export default function ProjectsPage() {
         Projects
       </h1>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div ref={ref} className="grid grid-cols-2 gap-6">
         {collabProjectsData.map((projectsData, index) => (
-          <Link key={index} href={`/projects/${projectsData.path}`}>
-            <div
-              key={index}
-              className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
-            >
-              <Image
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <Link key={index} href={`/projects/${projectsData.path}`}>
+              <div
                 key={index}
-                src={projectsData.image}
-                alt={projectsData.title}
-                width={320}
-                height={230}
-                quality={100}
-              />
-              <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
-                <h3 className="font-bold text-2xl">{projectsData.title}</h3>
-                <p>{projectsData.description}</p>
+                className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
+              >
+                <Image
+                  key={index}
+                  src={projectsData.image}
+                  alt={projectsData.title}
+                  width={320}
+                  height={230}
+                  quality={100}
+                />
+                <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
+                  <h3 className="font-bold text-2xl">{projectsData.title}</h3>
+                  <p>{projectsData.description}</p>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </motion.div>
         ))}
       </div>
 
@@ -43,27 +62,35 @@ export default function ProjectsPage() {
         Projects
       </h1>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div ref={ref} className="grid grid-cols-2 gap-6">
         {personalProjectsData.map((projectsData, index) => (
-          <Link key={index} href={`/projects/${projectsData.path}`}>
-            <div
-              key={index}
-              className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
-            >
-              <Image
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <Link key={index} href={`/projects/${projectsData.path}`}>
+              <div
                 key={index}
-                src={projectsData.image}
-                alt={projectsData.title}
-                width={320}
-                height={230}
-                quality={100}
-              />
-              <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
-                <h3 className="font-bold text-2xl">{projectsData.title}</h3>
-                <p>{projectsData.description}</p>
+                className="size-[320px] bg-gray-300 rounded-3xl overflow-clip"
+              >
+                <Image
+                  key={index}
+                  src={projectsData.image}
+                  alt={projectsData.title}
+                  width={320}
+                  height={230}
+                  quality={100}
+                />
+                <div className="flex flex-col w-full items-start text-start justify-start p-4 pl-6">
+                  <h3 className="font-bold text-2xl">{projectsData.title}</h3>
+                  <p>{projectsData.description}</p>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </>
