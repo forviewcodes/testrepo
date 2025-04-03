@@ -3,37 +3,7 @@ import { askMyGovPortfolio } from "@/data/ProjectInfo";
 import { ArrowLeftIcon, BroadcastIcon, GitHubIcon, MailIcon } from "@/Icons";
 import Link from "next/link";
 import Image from "next/image";
-import { JSX } from "react";
 import ReactMarkdown from "react-markdown";
-
-interface TechItem {
-  name: string;
-  path: string;
-}
-
-interface SectionItem {
-  icon: JSX.Element;
-  heading: string;
-  details: string[];
-}
-
-interface Section {
-  title: string;
-  items: {
-    icon: JSX.Element;
-    heading: string;
-    details: string[];
-  }[];
-}
-
-interface AskMyGovPortfolio {
-  projectName: string;
-  overview: string;
-  techstack: {
-    main: TechItem[];
-  };
-  sections: Section[];
-}
 
 export default function AskGovMy() {
   return (
