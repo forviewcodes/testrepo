@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/hooks/useTheme";
 import { clx } from "@/lib/utils";
 import Avatar from "@/components/Avatar";
 import Navbar from "@/components/Navbar";
+import LayoutContent from "@/components/LayoutContent";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -29,13 +30,12 @@ export default function RootLayout({
           "items-center justify-center flex flex-col font-outfit"
         )}
       >
-        <ThemeProvider>
-          <Navbar></Navbar>
-          <div className="flex justify-center gap-x-20 ">
-            <Avatar />
-            <div className="w-[660px]">{children}</div>
-          </div>
-        </ThemeProvider>
+        <div className="mx-auto container px-8 pb-8">
+          <ThemeProvider>
+            <Navbar></Navbar>
+            <LayoutContent>{children}</LayoutContent>
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );

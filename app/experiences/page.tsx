@@ -16,7 +16,7 @@ export default function ExperiencesPage() {
 
   return (
     <div>
-      <h1 className="text-6xl font-bold pb-8">
+      <h1 className="text-5xl font-bold pb-8">
         <span className="bg-gradient-to-br from-[rgb(249,115,22)] to-[#EAB308] bg-clip-text text-transparent">
           Experiences
         </span>
@@ -30,7 +30,7 @@ export default function ExperiencesPage() {
         <div ref={ref} className="gap-4 flex flex-col">
           {ExpInfo.map((exp, index) => (
             <Link key={index} href={exp.href}>
-              <div className="bg-gray-400 w-[650px] h-auto rounded-2xl flex justify-between p-6">
+              <div className="bg-gray-400 h-auto rounded-2xl flex justify-between p-6">
                 <div>
                   <div className="text-4xl font-semibold">{exp.name}</div>
                   <div className="py-4 text-lg">{exp.details}</div>

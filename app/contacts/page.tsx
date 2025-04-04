@@ -12,14 +12,14 @@ export default function ContactsPage() {
     animate: { y: 0, opacity: 1 },
   };
   return (
-    <div ref={ref} className="max-w-2xl mx-auto">
+    <div ref={ref} className="">
       <motion.div
         variants={cardVariants}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <h1 className="text-6xl font-bold pb-8">
+        <h1 className="text-5xl font-bold pb-8">
           <span className="bg-gradient-to-br from-[rgb(249,115,22)] to-[#EAB308] bg-clip-text text-transparent">
             Let’s Connect <br /> and Collaborate!
           </span>

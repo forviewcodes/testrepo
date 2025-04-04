@@ -51,8 +51,7 @@ export const personalProjectsData = [
     id: 6,
     title: "Terraform : AWS",
     path: "terraformaws",
-    description:
-      "Infrastructure as Code (IaC) for automating AWS resource provisioning",
+    description: "IAC AWS resource provisioning",
     image: "/projects/personal/6.png",
     gitHubUrl: "/",
     previewUrl: "/",

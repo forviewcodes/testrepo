@@ -8,9 +8,14 @@ import { IconInfo } from "./IconInfo";
 import { AvatarInfo } from "@/data/AvatarInfo";
 import { TypeAnimation } from "react-type-animation";
 
-export default function Avatar() {
+export default function Avatar({ className }: { className?: string }) {
   return (
-    <div className="h-[640px] w-[345px] bg-gray-400 rounded-xl flex flex-col justify-between p-8 sticky top-10">
+    <div
+      className={clx(
+        "h-[640px] w-full min-[1200px]:w-[345px]  bg-gray-400 rounded-xl flex flex-col justify-between p-8 ",
+        className
+      )}
+    >
       <div className="items-center justify-center flex flex-col">
         <div className="h-[280px] w-[240px]  bg-black rounded-lg mb-6 overflow-clip">
           <Image

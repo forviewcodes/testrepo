@@ -30,8 +30,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="p-10 items-center justify-center flex">
-      <div className="flex items-center justify-between bg-gray-400 p-4 py-2 rounded-xl gap-2">
+    <div className="p-8 items-center justify-center flex sticky top-2 z-50">
+      <div className="flex items-center justify-between bg-gray-400 p-4 py-2 rounded-xl gap-2 border border-black">
         <ThemeToggler
           themes={[
             { theme: "light", icon: <SunIcon /> },

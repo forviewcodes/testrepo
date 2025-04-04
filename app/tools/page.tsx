@@ -46,19 +46,19 @@ function ToolsSection({ type, label }: ToolSectionProps) {
   const filteredTools = ToolsImages.filter((tool) => tool.type === type);
 
   return (
-    <div ref={ref} className="p-10 pt-0 pl-0">
+    <div ref={ref}>
       <motion.div
         variants={cardVariants}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <h1 className="text-6xl font-bold pb-4">
+        <h1 className="text-5xl font-bold pb-8 text-center">
           <span className="bg-gradient-to-br from-[#F97316] to-[#EAB308] bg-clip-text text-transparent">
             {label}
           </span>
         </h1>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 pb-8 ">
           {filteredTools.map((tool) => (
             <div
               key={tool.name}
