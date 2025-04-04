@@ -12,7 +12,7 @@ export default function Avatar({ className }: { className?: string }) {
   return (
     <div
       className={clx(
-        "h-[640px] w-full min-[1200px]:w-[345px]  bg-gray-400 rounded-xl flex flex-col justify-between p-8 ",
+        "h-[640px]  w-[310px]  bg-gray-400 rounded-xl flex flex-col justify-center p-8 ",
         className
       )}
     >

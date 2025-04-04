@@ -22,9 +22,9 @@ export default function Home() {
         variants={cardVariants}
         initial="initial"
         animate={isInView ? "animate" : "initial"}
-        transition={{ duration: 0.3, delay: 0.2 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
       >
-        <div ref={ref} className="flex flex-col items-start space-y-6">
+        <div ref={ref} className="flex flex-col items-center space-y-6 pt-8">
           <h1 className="text-4xl font-extrabold">
             Developing Solutions,
             <br /> Creating Opportunities
@@ -43,16 +43,16 @@ export default function Home() {
             frontend technologies. I specialize in transforming ideas into
             beautifully designed, high-performance web applications.
           </p>
-          <div className="flex flex-wrap justify-start gap-6 text-lg font-medium">
-            <div className="flex flex-col items-start">
+          <div className="flex flex-wrap justify-center gap-6 text-lg font-medium">
+            <div className="flex flex-col items-center">
               <span className="text-4xl font-bold ">12+</span>
               <span className="">Years of Experience</span>
             </div>
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-center">
               <span className="text-4xl font-bold ">46+</span>
               <span className="">Projects Completed</span>
             </div>
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-center">
               <span className="text-4xl font-bold ">20+</span>
               <span className="">Worldwide Clients</span>
             </div>
