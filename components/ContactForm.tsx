@@ -1,7 +1,7 @@
 export default function ContactForm() {
   return (
     <form className=" mx-auto p-5 pt-4 bg-gray-400 rounded-2xl">
-      <label className="block mb-2  ">Name</label>
+      <label className="block mb-2 text-start ">Name</label>
       <input
         type="text"
         name="name"
@@ -10,7 +10,7 @@ export default function ContactForm() {
         required
       />
 
-      <label className="block mb-2 ">Email</label>
+      <label className="block mb-2 text-start ">Email</label>
       <input
         type="email"
         name="email"
@@ -19,7 +19,7 @@ export default function ContactForm() {
         required
       />
 
-      <label className="block mb-2  ">Message</label>
+      <label className="block mb-2 text-start ">Message</label>
       <textarea
         name="message"
         placeholder="Your Message"
