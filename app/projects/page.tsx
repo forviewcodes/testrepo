@@ -5,6 +5,7 @@ import Image from "next/image";
 import { collabProjectsData, personalProjectsData } from "@/data/ProjectsData";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { clx } from "@/lib/utils";
 
 const cardVariants = {
   initial: { y: 50, opacity: 0 },
@@ -36,7 +37,7 @@ function ProjectSection({
 
   return (
     <section className="w-full">
-      <h2 className="text-5xl font-bold py-8 text-center">
+      <h2 className="text-5xl font-bold py-8 text-center pt-0 lg:text-left">
         <span
           className={`bg-gradient-to-br from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text text-transparent`}
         >
@@ -47,7 +48,10 @@ function ProjectSection({
 
       <div
         ref={ref}
-        className="grid grid-cols-1 gap-6 items-center justify-items-center"
+        className={clx(
+          "grid grid-cols-1 gap-6 items-center justify-items-center",
+          " sm:grid-cols-2 lg:grid-cols-2 pb-8"
+        )}
       >
         {projects.map((project, index) => (
           <motion.div
@@ -62,7 +66,7 @@ function ProjectSection({
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={300}
+                  width={310}
                   height={230}
                   quality={100}
                 />
@@ -81,7 +85,12 @@ function ProjectSection({
 
 export default function ProjectsPage() {
   return (
-    <main className="flex flex-col items-center justify-center w-full h-full px-4">
+    <main
+      className={clx(
+        "flex flex-col items-center justify-center w-full h-full px-4",
+        ""
+      )}
+    >
       <ProjectSection
         title="Collaborative"
         gradientFrom="#F97316"

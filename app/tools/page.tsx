@@ -53,12 +53,12 @@ function ToolsSection({ type, label }: ToolSectionProps) {
         animate={isInView ? "animate" : "initial"}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <h1 className="text-5xl font-bold pb-8 text-center">
+        <h1 className="text-5xl font-bold pb-8 text-center lg:text-left">
           <span className="bg-gradient-to-br from-[#F97316] to-[#EAB308] bg-clip-text text-transparent">
             {label}
           </span>
         </h1>
-        <div className="grid grid-cols-1 gap-4 pb-8 ">
+        <div className="grid grid-cols-[300px] sm:grid-cols-[300px_300px]  gap-4 pb-8">
           {filteredTools.map((tool) => (
             <div
               key={tool.name}

@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <form className=" mx-auto p-5 pt-4 bg-gray-400 rounded-2xl">
+    <form className="p-5 pt-4 bg-gray-400 rounded-2xl">
       <label className="block mb-2 text-start ">Name</label>
       <input
         type="text"

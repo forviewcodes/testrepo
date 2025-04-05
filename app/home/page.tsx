@@ -1,5 +1,6 @@
 "use client";
 
+import { clx } from "@/lib/utils";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -24,8 +25,14 @@ export default function Home() {
         animate={isInView ? "animate" : "initial"}
         transition={{ duration: 0.4, delay: 0.2 }}
       >
-        <div ref={ref} className="flex flex-col items-center space-y-6 pt-8">
-          <h1 className="text-4xl font-extrabold">
+        <div
+          ref={ref}
+          className={clx(
+            "flex flex-col items-center space-y-6 pt-8",
+            "lg:items-start lg:pt-0"
+          )}
+        >
+          <h1 className="text-4xl font-extrabold lg:text-left">
             Developing Solutions,
             <br /> Creating Opportunities
           </h1>
@@ -38,7 +45,7 @@ export default function Home() {
 
           <h1 className="text-6xl font-extrabold">Testing</h1>
           <h2 className="text-2xl font-semibold ">Frontend Developer</h2>
-          <p className="max-w-lg text-lg ">
+          <p className="max-w-lg lg:max-w-2xl text-lg ">
             Crafting seamless and engaging user experiences through modern
             frontend technologies. I specialize in transforming ideas into
             beautifully designed, high-performance web applications.

@@ -27,10 +27,10 @@ export default function RootLayout({
       <body
         className={clx(
           `${outfit.variable} antialiased`,
-          "items-center justify-center flex flex-col font-outfit"
+          "items-center justify-center flex flex-col font-outfit xl:px-8"
         )}
       >
-        <div className="mx-auto container px-8 pb-8">
+        <div className="mx-auto container px-8 pb-8 ">
           <ThemeProvider>
             <Navbar></Navbar>
             <LayoutContent>{children}</LayoutContent>

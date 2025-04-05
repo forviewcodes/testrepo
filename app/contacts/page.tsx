@@ -12,7 +12,7 @@ export default function ContactsPage() {
     animate: { y: 0, opacity: 1 },
   };
   return (
-    <div ref={ref} className="">
+    <div ref={ref} className="pb-8">
       <motion.div
         variants={cardVariants}
         initial="initial"

@@ -15,7 +15,7 @@ export default function ExperiencesPage() {
   };
 
   return (
-    <div>
+    <div className="pb-8">
       <h1 className="text-5xl font-bold pb-8">
         <span className="bg-gradient-to-br from-[rgb(249,115,22)] to-[#EAB308] bg-clip-text text-transparent">
           Experiences
