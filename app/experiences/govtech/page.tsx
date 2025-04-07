@@ -1,12 +1,13 @@
 "use client";
 import { Button } from "@/components/Button";
-import { ExpGovTech, ExpInfo } from "@/data/ExpInfo";
-import { ArrowLeftIcon, HomeIcon } from "@/Icons";
+import { ExpGovTech } from "@/data/ExpInfo";
+import { ArrowLeftIcon } from "@/Icons";
 import ReactMarkdown from "react-markdown";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { usePathname } from "next/navigation";
+import PreviousExperience from "@/components/PreviousExperience";
 
 export default function GovtechPage() {
   const pathname = usePathname();
@@ -88,33 +89,7 @@ export default function GovtechPage() {
       </div>
 
       <h1 className="font-bold text-5xl pb-6">Previous Experiences</h1>
-      <motion.div
-        variants={cardVariants}
-        initial="initial"
-        animate={isInView ? "animate" : "initial"}
-        transition={{ duration: 0.3, delay: 0.2 }}
-      >
-        <div ref={ref} className="gap-4 flex flex-col">
-          {ExpInfo.map((exp, index) => {
-            if (modifiedPathname === exp.name.toLowerCase()) {
-              return null;
-            }
-
-            return (
-              <Link key={index} href={exp.href}>
-                <div className="bg-gray-400 h-auto rounded-2xl flex justify-between p-6">
-                  <div>
-                    <div className="text-4xl font-semibold">{exp.name}</div>
-                    <div className="py-4 text-lg">{exp.details}</div>
-                    <div>{exp.year}</div>
-                  </div>
-                  <HomeIcon className="shrink-0" />
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </motion.div>
+      <PreviousExperience />
     </div>
   );
 }
