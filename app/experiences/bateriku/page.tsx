@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/Button";
-import { ExpGovTech, ExpInfo } from "@/data/ExpInfo";
+import { ExpBateriku, ExpInfo } from "@/data/ExpInfo";
 import { ArrowLeftIcon, HomeIcon } from "@/Icons";
 import ReactMarkdown from "react-markdown";
 import { motion, useInView } from "framer-motion";
@@ -29,23 +29,23 @@ export default function BaterikuPage() {
       </Link>
       <div className="py-8 flex flex-col gap-8">
         <div>
-          <h1 className="font-bold text-5xl pb-1">{ExpGovTech.name}</h1>
-          <p>{ExpGovTech.year}</p>
+          <h1 className="font-bold text-5xl pb-1">{ExpBateriku.name}</h1>
+          <p>{ExpBateriku.year}</p>
         </div>
         <div>
           <h2 className="font-bold text-4xl pb-4">Overview</h2>
-          <p>{ExpGovTech.overview}</p>
+          <p>{ExpBateriku.overview}</p>
         </div>
         <div>
           <h2 className="font-bold text-4xl pb-4">My Role</h2>
-          <p>{ExpGovTech.myRole}</p>
+          <p>{ExpBateriku.myRole}</p>
         </div>
         <div>
           <h2 className="font-bold text-4xl pb-6">
             Skills Acquired and Contributions
           </h2>
           <div className="space-y-4">
-            {ExpGovTech.keyAchievementsAndContributions.map(
+            {ExpBateriku.keyAchievementsAndContributions.map(
               (achievement, index) => (
                 <div key={index} className="">
                   <h3 className="font-semibold text-xl">
@@ -75,7 +75,7 @@ export default function BaterikuPage() {
 
         <div>
           <h2 className="font-bold text-4xl pb-4">Impact</h2>
-          <p>{ExpGovTech.impact}</p>
+          <p>{ExpBateriku.impact}</p>
         </div>
 
         <Link

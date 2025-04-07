@@ -88,22 +88,236 @@ export const ExpGovTech = {
 };
 
 export const ExpBateriku = {
-  name: "GovTech Nucleus Unit",
-  year: "May 2024 - Present",
-  overview: " at HEHEHE",
-  myRole: "fullstack engineer",
-  skillsAquired:
-    "Advanced proficiency in design tools like Adobe XD, Sketch, and Figma. Deepened understanding of user-centered design principles and usability testing. Enhanced ability to work in a fast-paced, creative environment with tight deadlines.",
+  name: "Bateriku (M) Sdn Bhd",
+  year: "Jan 2024 - May 2024",
+  overview:
+    "As part of Bateriku (M) Sdn Bhd, a national growing leader in on-demand automotive services, I contribute to a dynamic team dedicated to developing scalable, high-performance backend systems. Using Ruby on Rails, we design and maintain robust solutions that power services such as on-demand battery replacement and roadside assistance. By working closely with a small, agile team, we ensure the delivery of high-quality software solutions that align with Bateriku's strategic goals. My role spans the entire development lifecycle, from development to deployment, with a focus on upholding best practices and ensuring smooth, real-time communication through tools like Slack. Through our efforts, we are empowering Malaysians with innovative, accessible, and reliable automotive services at their fingertips",
+  myRole:
+    "As a Software Engineer/Developer at Bateriku (M) Sdn Bhd, my responsibilities include on developing and maintaining backend applications using Ruby on Rails, with a strong focus on stability and performance. Operating within an agile development environment, contributions were made toward product increments while consistently meeting delivery timelines. Daily standups on Slack facilitated clear communication of progress and identification of blockers. Code reviews were conducted through Slack discussions to maintain high standards and ensure adherence to best practices. Close collaboration with cross-functional teams supported the design and implementation of new features, as well as enhancements to existing functionality. Active involvement spanned the full development lifecycle—from planning and design to testing and deployment—ensuring efficiency and quality throughout.",
+  keyAchievementsAndContributions: [
+    {
+      heading: "Rspec",
+      details: [
+        "Gained proficiency in writing tests for endpoints, ensuring the reliability and robustness of the API endpoints.",
+      ],
+    },
+    {
+      heading: "Endpoint Development",
+      details: [
+        "Developed several production-ready endpoints using available code, ensuring adherence to DRY principles (Don’t Repeat Yourself).",
+      ],
+    },
+    {
+      heading: "MVC (Model-View-Controller)",
+      details: [
+        "Acquired a solid understanding of the MVC architecture and how to structure applications effectively in Ruby on Rails.",
+      ],
+    },
+    {
+      heading: "RESTful Routes",
+      details: [
+        "Designed and implemented RESTful routes using routes.rb, enabling efficient and scalable application routing.",
+      ],
+    },
+    {
+      heading: "API Development",
+      details: [
+        "Built clean, versioned APIs with JSON responses to maintain clarity and consistency in data exchanges.",
+      ],
+    },
+    {
+      heading: "Clean, Idiomatic Ruby Code",
+      details: [
+        "Committed to writing clean, readable, and idiomatic Ruby code that aligns with best practices.",
+      ],
+    },
+    {
+      heading: "Metaprogramming & Object-Oriented Design",
+      details: [
+        "Leveraged metaprogramming techniques and object-oriented design principles to create reusable, flexible code.",
+      ],
+    },
+    {
+      heading: "Rails Generators",
+      details: [
+        "Utilized Rails generators for scaffolding models, controllers, and views, significantly boosting development speed and consistency.",
+      ],
+    },
+    {
+      heading: "Test-Driven Development (TDD)",
+      details: [
+        "Practiced TDD to ensure that the codebase is reliable, well-tested, and maintainable.",
+      ],
+    },
+    {
+      heading: "Convention over Configuration",
+      details: [
+        "Adopted 'Convention over Configuration' to streamline the development process and increase productivity.",
+      ],
+    },
+    {
+      heading: "DRY Principles",
+      details: [
+        "Focused on writing DRY code by identifying reusable patterns and eliminating redundancy.",
+      ],
+    },
+  ],
+
   impact:
-    "‍My experience at PixelForge Studios significantly shaped my design philosophy, emphasizing the importance of blending creativity with functionality. The projects I worked on not only expanded my skill set but also instilled a passion for creating designs that resonate with users on a deeper level.",
+    "At Bateriku, contributions were made to enhance backend system scalability and streamline the development process. A scalable backend endpoint was developed, aligning with company standards and reducing future complexity for developers. Detailed Swagger documentation was created, providing clear and standardized API specifications that facilitate smooth cross-team collaboration. Additionally, local development onboarding documentation was improved, reducing setup time and enabling new developers to quickly integrate into the project, fostering a more efficient and collaborative environment.",
 };
 
 export const ExpChemiz = {
-  name: "GovTech Nucleus Unit",
-  year: "May 2024 - Present",
-  overview: " at HEHEHE",
-  myRole: "fullstack engineer",
-  skillsAquired:
-    "advancing in fullstack development, cloud computing, and agile methodologies.",
-  impact: "",
+  name: "Chemiz (M) Sdn Bhd",
+  year: "Jan 2021 - Jan 2024",
+  overview:
+    "At Chemiz (M) Sdn. Bhd, we are at the forefront of providing top-tier laboratory chemicals and reagents, supporting industries like pharmaceuticals, research, food, electronics, and personal care. Since our inception in 2004, we’ve built a reputation for excellence by offering a diverse range of products, including Analytical Reagent (AR) Grade, Chemically Pure (CP) Grade, and High-Performance Liquid Chromatography (HPLC) Grade chemicals. As the Production Manager, I lead efforts to uphold the highest international quality standards through our ISO 9001:2015 certification. We are dedicated to delivering premium products with competitive pricing, rapid delivery, and rigorous quality control—ensuring that our customers receive nothing short of the best.",
+  myRole:
+    "As a Production Manager at Chemiz (M) Sdn Bhd, I was responsible for leading initiatives to optimize production processes, ensuring alignment with international quality standards, and driving innovation across various functional areas. I spearheaded the development and implementation of ISO 9001, ISO 19001, and ISO 13485 standards, ensuring the highest levels of quality and regulatory compliance. My role involved fostering a culture of excellence by training production teams in quality assurance/quality control measures, improving product quality and customer satisfaction. In addition to managing Lab (Formulations) operations, I led product development initiatives, including formulation testing and documentation. I collaborated closely with cross-functional teams to design and implement innovative design systems and operational processes that integrated new products seamlessly and optimized existing operations for cost-effectiveness. Daily operations management encompassed overseeing personnel across production, delivery, and storage units, ensuring a cohesive and high-performing team environment. I orchestrated customer delivery schedules and supervised the delivery unit to ensure timely and efficient order fulfillment. Furthermore, I led recruitment efforts to strategically onboard new talent and supported equipment procurement through the tender process to secure high-quality assets at competitive prices. Through these efforts, I drove significant improvements in operational efficiency, product excellence, and safety protocols, contributing to the organization's overall success.",
+  keyAchievementsAndContributions: [
+    {
+      heading: "ISO Standards Implementation",
+      details: [
+        "Spearheaded the development and implementation of ISO 9001, ISO 19001, and ISO 13485 standards.",
+        "Ensured alignment with international quality management practices and regulatory compliance.",
+      ],
+    },
+    {
+      heading: "Cloud-Based Solutions",
+      details: [
+        "Implemented cloud-based storage solutions, reducing reliance on physical paperwork.",
+        "Improved data management efficiency across departments.",
+      ],
+    },
+    {
+      heading: "Quality Assurance & Control",
+      details: [
+        "Led comprehensive training on quality control measures.",
+        "Fostered a culture of excellence and drove improvements in product quality and customer satisfaction.",
+      ],
+    },
+    {
+      heading: "Operational Process Optimization",
+      details: [
+        "Developed and implemented innovative design systems and operational processes.",
+        "Streamlined product integration and enhanced cost-effectiveness.",
+      ],
+    },
+    {
+      heading: "Team Leadership & Development",
+      details: [
+        "Managed personnel across production, delivery, and storage units.",
+        "Led recruitment efforts and aligned team capabilities with organizational goals.",
+      ],
+    },
+    {
+      heading: "Product Development & Testing",
+      details: [
+        "Oversaw product development initiatives, including formulation testing and documentation.",
+        "Ensured high-quality products aligned with regulatory requirements.",
+      ],
+    },
+    {
+      heading: "Cross-Functional Collaboration",
+      details: [
+        "Worked closely with cross-functional teams to design, implement, and enhance new product features.",
+        "Drove continuous improvements in production processes.",
+      ],
+    },
+    {
+      heading: "Inventory & Resource Management",
+      details: [
+        "Managed daily operations in the production and store areas.",
+        "Optimized resource utilization and maintained efficient inventory systems.",
+      ],
+    },
+    {
+      heading: "Safety & Compliance",
+      details: [
+        "Provided guidance on chemical safety protocols.",
+        "Promoted a culture of safety and ensured compliance with regulatory requirements.",
+      ],
+    },
+    {
+      heading: "Lab Work & Formulations",
+      details: [
+        "Led formulation and development in the laboratory, ensuring product quality and consistency.",
+        "Trained the team on lab safety protocols and best practices for chemical handling.",
+        "Maintained thorough documentation of formulation processes and results.",
+        "Actively participated in the analysis and refinement of formulations to meet both quality standards and customer expectations.",
+      ],
+    },
+    {
+      heading: "SDS (Safety Data Sheet) Training",
+      details: [
+        "Delivered training on Safety Data Sheets (SDS) to ensure the team was fully informed on the safe handling, storage, and disposal of chemicals.",
+        "Fostered a safe and compliant working environment.",
+      ],
+    },
+  ],
+  impact: [
+    {
+      heading: "ISO Standards Implementation",
+      details: [
+        "Initiated and led the development and implementation of international quality standards ISO 9001, ISO 19001, and ISO 13485.",
+        "Established a robust framework for regulatory compliance and significantly enhanced overall product quality and operational standards.",
+      ],
+    },
+    {
+      heading: "Quality Control Training Program",
+      details: [
+        "Developed and launched a comprehensive quality control training program.",
+        "Enhanced product quality and customer satisfaction while fostering a culture of excellence across production teams.",
+      ],
+    },
+    {
+      heading: "Operational Process Optimization",
+      details: [
+        "Optimized product integration and existing operations for cost-effectiveness.",
+        "Developed and implemented innovative design systems and operational processes.",
+      ],
+    },
+    {
+      heading: "Team Leadership & Development",
+      details: [
+        "Created a high-performing team by effectively managing personnel across production, delivery, and storage units.",
+        "Aligned team capabilities with organizational goals.",
+      ],
+    },
+    {
+      heading: "Cross-Functional Collaboration",
+      details: [
+        "Drove continuous improvements in product features and production processes through cross-functional collaboration.",
+        "Enhanced efficiency and scalability.",
+      ],
+    },
+    {
+      heading: "Resource Utilization & Workflow Optimization",
+      details: [
+        "Ensured efficient resource utilization and smooth workflow in production and store areas.",
+        "Led to reduced downtime and improved operational effectiveness.",
+      ],
+    },
+    {
+      heading: "Safety & Compliance Culture",
+      details: [
+        "Started a culture of safety and compliance by providing guidance on chemical safety protocols.",
+        "Ensured adherence to regulatory requirements.",
+      ],
+    },
+    {
+      heading: "Lab Safety & Product Consistency",
+      details: [
+        "Created high standards of lab safety and product consistency by leading formulation testing, analysis, and refinement.",
+        "Ensured products met customer expectations.",
+      ],
+    },
+    {
+      heading: "SDS (Safety Data Sheet) Training",
+      details: [
+        "Fostered a safe and compliant working environment by delivering comprehensive SDS training.",
+        "Ensured proper handling, storage, and disposal of chemicals.",
+      ],
+    },
+  ],
 };
