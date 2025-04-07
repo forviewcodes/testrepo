@@ -24,6 +24,8 @@ type ProjectSectionProps = {
   gradientFrom: string;
   gradientTo: string;
   projects: Project[];
+  sectionRef: any;
+  isInView: any;
 };
 
 function ProjectSection({
@@ -31,12 +33,11 @@ function ProjectSection({
   gradientFrom,
   gradientTo,
   projects,
+  sectionRef,
+  isInView,
 }: ProjectSectionProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
-    <section className="w-full">
+    <section className="w-full" ref={sectionRef}>
       <h2 className="text-5xl font-bold py-8 text-center pt-0 lg:text-left">
         <span
           className={`bg-gradient-to-br from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text text-transparent`}
@@ -47,7 +48,6 @@ function ProjectSection({
       </h2>
 
       <div
-        ref={ref}
         className={clx(
           "grid grid-cols-1 gap-6 items-center justify-items-center",
           " sm:grid-cols-2 lg:grid-cols-2 pb-8"
@@ -84,6 +84,11 @@ function ProjectSection({
 }
 
 export default function ProjectsPage() {
+  const collabRef = useRef(null);
+  const personalRef = useRef(null);
+
+  const isCollabInView = useInView(collabRef, { once: true });
+  const isPersonalInView = useInView(personalRef, { once: true });
   return (
     <main
       className={clx(
@@ -96,6 +101,8 @@ export default function ProjectsPage() {
         gradientFrom="#F97316"
         gradientTo="#EAB308"
         projects={collabProjectsData}
+        sectionRef={collabRef}
+        isInView={isCollabInView}
       />
 
       <ProjectSection
@@ -103,6 +110,8 @@ export default function ProjectsPage() {
         gradientFrom="#F97316"
         gradientTo="#EAB308"
         projects={personalProjectsData}
+        sectionRef={personalRef}
+        isInView={isPersonalInView}
       />
     </main>
   );

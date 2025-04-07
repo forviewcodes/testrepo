@@ -6,11 +6,18 @@ import Link from "next/link";
 import { useRef } from "react";
 import { usePathname } from "next/navigation";
 
-export default function PreviousExperience() {
+type PreviousExperienceProps = {
+  sub?: boolean;
+};
+
+export default function PreviousExperience({
+  sub = true,
+}: PreviousExperienceProps) {
   const pathname = usePathname();
   const modifiedPathname = pathname.replace("/experiences/", "");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
@@ -24,6 +31,9 @@ export default function PreviousExperience() {
         animate={isInView ? "animate" : "initial"}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
+        {sub && (
+          <h1 className="font-bold text-5xl pb-6">Previous Experiences</h1>
+        )}
         <div ref={ref} className="gap-4 flex flex-col">
           {ExpInfo.map((exp, index) => {
             if (modifiedPathname === exp.name.toLowerCase()) {
