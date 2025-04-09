@@ -12,14 +12,14 @@ export default function Avatar({ className }: { className?: string }) {
   return (
     <div
       className={clx(
-        "h-[600px]  bg-gray-400 rounded-xl flex justify-center p-8 ",
+        "h-[600px]  bg-gray-110 rounded-xl flex justify-center p-8 ",
         "sm:w-full lg:w-[310px]",
         className
       )}
     >
       <div className="flex flex-col justify-between h-[536px]">
         <div className="items-center justify-center flex flex-col">
-          <div className="h-[280px] w-[240px]  bg-black rounded-lg mb-6 overflow-clip">
+          <div className="h-[280px] w-[240px] rounded-lg mb-6 overflow-clip">
             <Image
               src={"/avatar/avatar-light.png"}
               alt={"avatar"}
@@ -27,33 +27,39 @@ export default function Avatar({ className }: { className?: string }) {
               height={280}
             ></Image>
           </div>
-          <div className="flex flex-col items-start space-y-1 text-gray-900 dark:text-white">
-            <div className="text-center text-black">
-              <h1 className="text-4xl font-extrabold">Harris Azmi</h1>
+          <div className="flex flex-col items-start space-y-1">
+            <div className="text-center">
+              <h1 className="text-4xl font-extrabold  text-black">
+                Harris Azmi
+              </h1>
               <h2 className="text-xl font-medium">
-                <TypeAnimation
-                  sequence={[
-                    "FullStack Web Developer",
-                    1000,
-                    "Frontend Specialist",
-                    1000,
-                    "Dev Ops Engineer",
-                    1000,
-                    "Home Lab Brewer",
-                    1000,
-                    "MERN Stack Developer",
-                    1000,
-                    "Self-hosted Infra Engineer",
-                    1000,
-                    "Chemical Process Engineer",
-                    1000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                />
+                <span
+                  className={`bg-gradient-to-br from-orange-110 to-orange-120 bg-clip-text text-transparent`}
+                >
+                  <TypeAnimation
+                    sequence={[
+                      "FullStack Web Developer",
+                      1000,
+                      "Frontend Specialist",
+                      1000,
+                      "Dev Ops Engineer",
+                      1000,
+                      "Home Lab Brewer",
+                      1000,
+                      "MERN Stack Developer",
+                      1000,
+                      "Self-hosted Infra Engineer",
+                      1000,
+                      "Chemical Process Engineer",
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
+                </span>
               </h2>
-              <p className="text-lg">Shah Alam, Malaysia</p>
+              <p className="text-lg text-gray-130">Shah Alam, Malaysia</p>
             </div>
           </div>
 
@@ -72,16 +78,14 @@ export default function Avatar({ className }: { className?: string }) {
                   {tab.icon}
                 </div>
                 <IconAnimation />
-                <IconInfo className="border border-black top-11">
-                  {tab.label}
-                </IconInfo>
+                <IconInfo className="top-11 bg-gray-120">{tab.label}</IconInfo>
               </Link>
             ))}
           </div>
         </div>
         <div className="items-center justify-center flex">
           <Link href={"/contacts"}>
-            <Button className="px-10 py-2 hover:cursor-pointer">
+            <Button className="px-10 py-2 hover:cursor-pointer text-white">
               Let's talk
             </Button>
           </Link>

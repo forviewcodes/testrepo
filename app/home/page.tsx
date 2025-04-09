@@ -42,7 +42,7 @@ export default function Home() {
             ))}
           </h1>
 
-          <p>{HomeInfo.descHook}</p>
+          <p className="text-gray-130">{HomeInfo.descHook}</p>
           <h2 className="text-2xl font-semibold ">Frontend Developer</h2>
           <p className="max-w-lg lg:max-w-2xl text-lg ">
             Crafting seamless and engaging user experiences through modern
