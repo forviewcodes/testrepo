@@ -1,5 +1,6 @@
 "use client";
 
+import { HomeInfo } from "@/data/HomeInfo";
 import { clx } from "@/lib/utils";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -32,18 +33,16 @@ export default function Home() {
             "lg:items-start lg:pt-0"
           )}
         >
-          <h1 className="text-4xl font-extrabold lg:text-left">
-            Developing Solutions,
-            <br /> Creating Opportunities
+          <h1 className="text-5xl font-extrabold lg:text-left">
+            {HomeInfo.titleHook.split("\n").map((line, idx) => (
+              <span key={idx}>
+                {line}
+                <br />
+              </span>
+            ))}
           </h1>
 
-          <p>
-            More than just code. <br />
-            Smart solutions that drive growth, enhance experiences, and build
-            connections.
-          </p>
-
-          <h1 className="text-6xl font-extrabold">Testing</h1>
+          <p>{HomeInfo.descHook}</p>
           <h2 className="text-2xl font-semibold ">Frontend Developer</h2>
           <p className="max-w-lg lg:max-w-2xl text-lg ">
             Crafting seamless and engaging user experiences through modern
