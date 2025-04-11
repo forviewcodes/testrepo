@@ -21,8 +21,6 @@ type Project = {
 
 type ProjectSectionProps = {
   title: string;
-  gradientFrom: string;
-  gradientTo: string;
   projects: Project[];
   sectionRef: any;
   isInView: any;
@@ -30,21 +28,14 @@ type ProjectSectionProps = {
 
 function ProjectSection({
   title,
-  gradientFrom,
-  gradientTo,
   projects,
   sectionRef,
   isInView,
 }: ProjectSectionProps) {
   return (
     <section className="w-full" ref={sectionRef}>
-      <h2 className="text-5xl font-bold py-8 text-center pt-0 lg:text-left">
-        <span
-          className={`bg-gradient-to-br from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text text-transparent`}
-        >
-          {title}{" "}
-        </span>
-        Projects
+      <h2 className="text-2xl font-bold py-8 text-center pt-0 lg:text-left">
+        {title}
       </h2>
 
       <div
@@ -62,7 +53,7 @@ function ProjectSection({
             transition={{ duration: 0.3, delay: index * 0.2 }}
           >
             <Link href={`/projects/${project.path}`}>
-              <div className="h-[300px] w-fit bg-gray-300 rounded-3xl overflow-clip cursor-pointer">
+              <div className="h-[300px] w-fit bg-gray-110 rounded-3xl overflow-clip cursor-pointer border border-gray-110">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -97,18 +88,14 @@ export default function ProjectsPage() {
       )}
     >
       <ProjectSection
-        title="Collaborative"
-        gradientFrom="#F97316"
-        gradientTo="#EAB308"
+        title="Collaborative Projects"
         projects={collabProjectsData}
         sectionRef={collabRef}
         isInView={isCollabInView}
       />
 
       <ProjectSection
-        title="Personal"
-        gradientFrom="#F97316"
-        gradientTo="#EAB308"
+        title="Personal Projects"
         projects={personalProjectsData}
         sectionRef={personalRef}
         isInView={isPersonalInView}
