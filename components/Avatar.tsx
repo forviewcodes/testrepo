@@ -71,10 +71,11 @@ export default function Avatar({ className }: { className?: string }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={clx(
-                  "p-2 rounded-xl relative group overflow-visible"
+                  "p-2 rounded-xl relative group overflow-visible",
+                  "hover:text-white"
                 )}
               >
-                <div className="relative z-10 flex items-center">
+                <div className="relative z-10 flex items-center text-gray-130 group-hover:text-white">
                   {tab.icon}
                 </div>
                 <IconAnimation />
