@@ -34,7 +34,7 @@ function ProjectSection({
 }: ProjectSectionProps) {
   return (
     <section className="w-full" ref={sectionRef}>
-      <h2 className="text-2xl font-bold py-8 text-center pt-0 lg:text-left">
+      <h2 className="text-4xl font-bold py-8 text-center pt-0 lg:text-left">
         {title}
       </h2>
 
