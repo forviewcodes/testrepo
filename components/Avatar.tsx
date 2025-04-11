@@ -40,17 +40,17 @@ export default function Avatar({ className }: { className?: string }) {
                     sequence={[
                       "FullStack Web Developer",
                       1000,
+                      "MERN Stack Developer",
+                      1000,
                       "Frontend Specialist",
                       1000,
                       "Dev Ops Engineer",
                       1000,
                       "Home Lab Brewer",
                       1000,
-                      "MERN Stack Developer",
-                      1000,
                       "Self-hosted Infra Engineer",
                       1000,
-                      "Chemical Process Engineer",
+                      "Chemical Engineer!",
                       1000,
                     ]}
                     wrapper="span"

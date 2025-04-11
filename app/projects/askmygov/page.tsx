@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
-export default function AskGovMy() {
+export default function AskMyGov() {
   return (
     <div className="max-w-3xl mx-auto p-6 lg:pt-0 space-y-6">
       <Link href="/projects">

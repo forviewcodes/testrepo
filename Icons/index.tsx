@@ -20,3 +20,6 @@ export * from "./ArrowRightShortIcon";
 export * from "./ArrowLeftShortIcon";
 export * from "./GoogleIcon";
 export * from "./ArrowRightIcon";
+export * from "./AskMyGovIcon";
+export * from "./MydsIcon";
+export * from "./JataNegaraIcon";

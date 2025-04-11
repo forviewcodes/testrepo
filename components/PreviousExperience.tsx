@@ -1,10 +1,14 @@
+"use client";
 import { ExpInfo } from "@/data/ExpInfo";
-import { HomeIcon } from "@/Icons";
-
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { usePathname } from "next/navigation";
+import { clx } from "@/lib/utils";
+import router from "next/router";
+import { Button } from "./Button";
+import { ArrowRightIcon } from "@/Icons";
 
 type PreviousExperienceProps = {
   sub?: boolean;
@@ -41,16 +45,68 @@ export default function PreviousExperience({
             }
 
             return (
-              <Link key={index} href={exp.href}>
-                <div className="bg-gray-400 h-auto rounded-2xl flex justify-between p-6">
-                  <div>
-                    <div className="text-4xl font-semibold">{exp.name}</div>
-                    <div className="py-4 text-lg">{exp.details}</div>
-                    <div>{exp.year}</div>
+              <div
+                key={index}
+                className="bg-white h-auto rounded-2xl flex flex-col justify-between p-6 border border-blue-110 gap-11"
+              >
+                <div className="flex flex-col gap-7">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-4.5">
+                      <div className="rounded-full size-16 overflow-hidden shrink-0 border border-gray-130">
+                        <Image
+                          src={exp.path}
+                          alt={exp.name}
+                          width={64}
+                          height={64}
+                          quality={100}
+                        />
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold">{exp.name}</div>
+                        <div className="text-sm text-gray-130">
+                          {exp.position}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-sm text-gray-130">{exp.year}</div>
                   </div>
-                  <HomeIcon className="shrink-0" />
+                  <div className="text-base text-gray-130">{exp.details}</div>
+                  {(exp.projects?.length ?? 0) > 0 && (
+                    <div className="flex flex-col gap-[14px]">
+                      <h2 className="tracking-[2px] text-gray-130 text-xs font-medium">
+                        PROJECTS INVOLVED
+                      </h2>
+                      <div className="flex gap-2">
+                        {(exp.projects?.length ?? 0) > 0
+                          ? exp.projects!.map((project, index) => (
+                              <Link href={project.href} key={index}>
+                                <div
+                                  key={index}
+                                  className={clx(
+                                    "w-fit h-[70px] rounded-xl flex items-center justify-center gap-3 px-6",
+                                    "border border-blue-110 hover:bg-orange-101 hover:border-orange-140"
+                                  )}
+                                >
+                                  <div>{project.icon}</div>
+                                  <div className="font-semibold">
+                                    {project.name}
+                                  </div>
+                                </div>
+                              </Link>
+                            ))
+                          : null}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </Link>
+                <Link href={exp.href}>
+                  <Button className="flex items-center gap-2 flex-shrink-0 text-white hover:cursor-pointer ">
+                    More Info
+                    <ArrowRightIcon />
+                  </Button>
+                </Link>
+              </div>
             );
           })}
         </div>

@@ -74,15 +74,15 @@ export const collabProjectsData = [
 
   {
     id: 2,
-    title: "AskGovMy ",
-    path: "askgovmy",
+    title: "AskMyGov ",
+    path: "askmygov",
     description: "Malaysia Govenment Question & Answer Hub",
     shortDescription:
       "MYDS is a unified design system built for Malaysian government digital services. It offers reusable UI components and guidelines to ensure accessibility, responsiveness, and visual consistency. By streamlining development, it speeds up delivery while maintaining compliance with national digital standards.",
     image: "/projects/collab/askgov.png",
     gitHubUrl: "https://github.com/harrisazmi/Project3NumazuScraper",
     previewUrl: "https://project3frontendcf.harrisviewcodes.uk/",
-    href: "/projects/askgovmy",
+    href: "/projects/AskMyGov",
   },
   {
     id: 3,
