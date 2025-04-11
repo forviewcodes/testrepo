@@ -15,7 +15,15 @@ export default function Directory() {
         </Button>
       </Link>
 
-      <div className="w-full h-[430px] bg-green-800"></div>
+      <div className="relative w-full aspect-[325/202] mt-4">
+        <Image
+          src={directoryPortfolio.projectImage}
+          alt={directoryPortfolio.projectName}
+          width={3000}
+          height={2000}
+          quality={100}
+        />
+      </div>
 
       <h1 className="font-bold text-5xl">{directoryPortfolio.projectName}</h1>
       <p className="text-lg text-gray-600">{directoryPortfolio.overview}</p>

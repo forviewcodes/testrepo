@@ -133,15 +133,17 @@ export default function Home() {
             <div className="flex flex-col gap-12">
               {collabProjectsData.map((project, index) => (
                 <div key={index} className="flex flex-col gap-6">
-                  <div className="relative w-full aspect-[325/202]">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={3000}
-                      height={2000}
-                      quality={100}
-                    />
-                  </div>
+                  <Link href={project.href}>
+                    <div className="relative w-full aspect-[325/202] hover:cursor-pointer">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={3000}
+                        height={2000}
+                        quality={100}
+                      />
+                    </div>
+                  </Link>
                   <div className="flex flex-col gap-2">
                     <div className="font-semibold text-xl">{project.title}</div>
                     <div className="text-gray-130">

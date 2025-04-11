@@ -7,7 +7,7 @@ import ReactMarkdown from "react-markdown";
 
 export default function AskGovMy() {
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 lg:pt-0 space-y-6">
       <Link href="/projects">
         <Button className="flex gap-4">
           <ArrowLeftIcon />
@@ -15,7 +15,15 @@ export default function AskGovMy() {
         </Button>
       </Link>
 
-      <div className="w-full h-[430px] bg-green-800"></div>
+      <div className="relative w-full aspect-[325/202] mt-4">
+        <Image
+          src={askMyGovPortfolio.projectImage}
+          alt={askMyGovPortfolio.projectName}
+          width={3000}
+          height={2000}
+          quality={100}
+        />
+      </div>
 
       <h1 className="font-bold text-5xl">{askMyGovPortfolio.projectName}</h1>
       <p className="text-lg text-gray-600">{askMyGovPortfolio.overview}</p>

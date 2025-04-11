@@ -2,6 +2,7 @@
 import { MailIcon } from "@/Icons";
 export const askMyGovPortfolio = {
   projectName: "AskMyGov",
+  projectImage: "/projects/collab/askgov.png",
   overview:
     "AskMyGov is a centralized platform designed to streamline communication between citizens and government agencies by providing a single, reliable source for frequently asked questions. It consolidates scattered information from multiple agency websites, ensuring accessibility and consistency while enhancing the efficiency of citizen-government interactions.",
 
@@ -106,6 +107,7 @@ export const askMyGovPortfolio = {
 
 export const directoryPortfolio = {
   projectName: "Directory",
+  projectImage: "/projects/collab/directory.png",
   overview:
     "Directory.gov.my, a centralized platform for accessing government officers' details and ministry contact information. The platform features a comprehensive staff and office directory, providing verified positions, divisions, contact details, and integrated mapping services (Google Maps). With bilingual support and mobile-responsive design, it streamlines access to government contacts, enhancing efficiency for citizens, employees, and stakeholders",
 
@@ -214,6 +216,7 @@ export const directoryPortfolio = {
 
 export const mydsPortfolio = {
   projectName: "MYDS",
+  projectImage: "/projects/collab/myds.png",
   overview:
     "MYDS is a comprehensive design system created to establish consistent user experience standards across Malaysian government digital services. The system provides a collection of reusable UI components, design patterns, and guidelines that enable teams to build accessible, responsive, and visually cohesive applications efficiently. MyDS aims to reduce redundancy in UI development efforts, accelerate project timelines, and ensure compliance with government digital standards.",
 
