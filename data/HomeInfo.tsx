@@ -79,7 +79,8 @@ export const HomeInfo = {
       name: "Farhan Fazli",
       position: "Sr Software Engineer",
       company: "GovTech Nucleus Unit",
-      comments: "Mantap Pak Abu! Teruskan usaha anda. Semoga berjaya!",
+      comments:
+        "Harris is one of the best people I’ve ever worked with—proactive, dynamic, and exceptionally organized. Dedicated and self-motivated, he brings a methodical approach and consistently adds value to every project. A strong analytical mindset and a clear drive for both personal and professional development set him apart. He learns quickly and I would have no hesitation in working with Harris once again in the future.",
       path: "/home/recommend/paan.png",
     },
     {
@@ -122,37 +123,37 @@ export const HomeInfo = {
   ],
   connect: [
     {
-      title: "Github",
+      title: "My Github",
       icon: <GitHubIcon className="size-6" />,
       details: "https://www.github.com/harrisazmi",
       href: "https://www.github.com/harrisazmi",
     },
     {
-      title: "LinkedIn",
+      title: "My LinkedIn",
       icon: <LinkedInIcon className="size-6" />,
       details: "https://www.linkedin.com/in/harris-azmi-roswadi/",
       href: "https://www.linkedin.com/in/harris-azmi-roswadi/",
     },
     {
-      title: "Whatsapp",
+      title: "Whatsapp Me!",
       icon: <WhatsappIcon className="size-6" />,
       details: "+6013-***-****",
       href: "https://wa.me/+60134256413",
     },
     {
-      title: "Telegram",
+      title: "Telegram!",
       icon: <TelegramIcon className="size-6" />,
       details: "+6013-***-****",
       href: "https://t.me/harris_azmi",
     },
     {
-      title: "Email",
+      title: "Email Me!",
       icon: <MailIcon className="size-6" />,
       details: "*******@gmail.com",
       href: "mailto:forviewcodes@gmail.com?subject=Inquiry%20from%20Your%20Portfolio&body=Hello,%20I%20came%20across%20your%20portfolio%20and%20wanted%20to%20reach%20out.%20Looking%20forward%20to%20connect%20with%20you%20harris!",
     },
     {
-      title: "CV/Resume",
+      title: "My CV/Resume",
       icon: <ResumeIcon className="size-6" />,
       details: "Contact me for access",
       href: "/resume/harris_azmi_resume.pdf",

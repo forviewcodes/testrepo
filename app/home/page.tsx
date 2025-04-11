@@ -201,7 +201,7 @@ export default function Home() {
               </div>
             ))}
           </HorizontalCard>
-          <Contacts title={"CONNECT WITH ME"} />
+          <Contacts title={"LET'S CONNECT WITH ME!"} />
         </div>
       </motion.div>
     </div>
