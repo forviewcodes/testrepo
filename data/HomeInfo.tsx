@@ -95,7 +95,8 @@ export const HomeInfo = {
       name: "Alif Aiman",
       position: "Data Scientist",
       company: "GovTech Nucleus Unit",
-      comments: "Mantap Pak Abu! Teruskan usaha anda. Semoga berjaya!",
+      comments:
+        "Thank you for teaching me the ropes of networking and self hosting.Best place for me to seek for advice.Semoga Berjaya and keep on grinding!",
       path: "/home/recommend/alif.png",
     },
     {
