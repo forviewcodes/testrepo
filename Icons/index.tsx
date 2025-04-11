@@ -16,3 +16,7 @@ export * from "./MailIcon";
 export * from "./ResumeIcon";
 export * from "./ArrowLeftIcon";
 export * from "./BroadcastIcon";
+export * from "./ArrowRightShortIcon";
+export * from "./ArrowLeftShortIcon";
+export * from "./GoogleIcon";
+export * from "./ArrowRightIcon";

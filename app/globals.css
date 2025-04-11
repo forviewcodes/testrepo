@@ -11,8 +11,17 @@
   --color-gray-130: #939393;
 
   /* orange */
+
+  /* bg-color */
+  --color-orange-101: #fff8ed;
+  /* linear-color */
   --color-orange-110: #f97916;
   --color-orange-120: #eab308;
+  /* mid-linear-color */
+  --color-orange-140: #f1960f;
+
+  /* blue */
+  --color-blue-110: #edf5fa;
 }
 body {
   color: var(--color-black);
@@ -29,4 +38,11 @@ body {
 
 .dark .img-light {
   display: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

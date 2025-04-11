@@ -1,5 +1,5 @@
 "use client";
-import ContactForm from "@/components/ContactForm";
+import Contact from "@/components/Contact";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -19,12 +19,12 @@ export default function ContactsPage() {
         animate={isInView ? "animate" : "initial"}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <h1 className="text-5xl font-bold pb-8">
-          <span className="bg-gradient-to-br from-[rgb(249,115,22)] to-[#EAB308] bg-clip-text text-transparent">
-            Let’s Connect <br /> and Collaborate!
+        <h1 className="text-5xl font-bold pb-7">
+          <span className="font-bold text-2xl">
+            Let’s Connect and Collaborate!
           </span>
         </h1>
-        <ContactForm />
+        <Contact />
       </motion.div>
     </div>
   );

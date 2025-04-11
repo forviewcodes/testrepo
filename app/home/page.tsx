@@ -4,6 +4,13 @@ import { HomeInfo } from "@/data/HomeInfo";
 import { clx } from "@/lib/utils";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
+import HorizontalCard from "@/components/HorizontalCard";
+import { ArrowRightIcon } from "@/Icons";
+import Link from "next/link";
+import Contacts from "@/components/Contact";
+import { Button } from "@/components/Button";
+import { collabProjectsData } from "@/data/ProjectsData";
 
 export default function Home() {
   const ref = useRef(null);
@@ -29,40 +36,170 @@ export default function Home() {
         <div
           ref={ref}
           className={clx(
-            "flex flex-col items-center space-y-6 pt-8",
-            "lg:items-start lg:pt-0"
+            "flex flex-col items-center space-y-8 pt-8",
+            "lg:items-start lg:pt-0 w-full"
           )}
         >
-          <h1 className="text-5xl font-extrabold lg:text-left">
-            {HomeInfo.titleHook.split("\n").map((line, idx) => (
-              <span key={idx}>
-                {line}
-                <br />
-              </span>
-            ))}
-          </h1>
+          <div className="border-b-1 border-blue-110">
+            <h1 className="text-4xl font-extrabold lg:text-left">
+              {HomeInfo.titleHook.split("\n").map((line, id) => (
+                <span key={id}>
+                  {line}
+                  <br />
+                </span>
+              ))}
+            </h1>
+            <p className="text-gray-130 pb-8 pt-3">{HomeInfo.descHook}</p>
+          </div>
 
-          <p className="text-gray-130">{HomeInfo.descHook}</p>
-          <h2 className="text-2xl font-semibold ">Frontend Developer</h2>
-          <p className="max-w-lg lg:max-w-2xl text-lg ">
-            Crafting seamless and engaging user experiences through modern
-            frontend technologies. I specialize in transforming ideas into
-            beautifully designed, high-performance web applications.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 text-lg font-medium">
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold ">12+</span>
-              <span className="">Years of Experience</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold ">46+</span>
-              <span className="">Projects Completed</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold ">20+</span>
-              <span className="">Worldwide Clients</span>
+          <div className="w-full border-b border-blue-110">
+            <h2 className="tracking-[2px] text-gray-130 text-xs font-medium">
+              EDUCATION
+            </h2>
+            <div className="py-8 gap-6 flex flex-col">
+              {HomeInfo.education.map((edu, index) => (
+                <div key={index} className="flex justify-between ">
+                  <div>
+                    <div className="text-xl font-medium">{edu.title}</div>
+                    <div className="text-gray-130 font-light text-sm">
+                      {edu.major}
+                    </div>
+                    <div className="text-gray-130 font-light text-sm">
+                      {edu.year}
+                    </div>
+                  </div>
+                  <div className="">
+                    <Image
+                      src={edu.path}
+                      alt={edu.name}
+                      width={120}
+                      height={60}
+                      quality={100}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
+          <HorizontalCard title={"CERTIFICATES"}>
+            {HomeInfo.certificate.map((certificate, index) => (
+              <div
+                key={index}
+                className="rounded-lg border border-blue-110 bg-white p-3 flex justify-between items-center flex-shrink-0 snap-start"
+              >
+                <div>
+                  <div
+                    className="font-medium"
+                    style={{ maxWidth: "20ch", wordWrap: "break-word" }}
+                  >
+                    {certificate.title}
+                  </div>
+                  <div className="text-xs text-gray-130">
+                    {certificate.issuer}, {certificate.year}
+                  </div>
+                  <div className="text-xs font-light text-gray-130">
+                    {certificate.credID}
+                  </div>
+                </div>
+                <div className="pl-4">
+                  <Image
+                    src={certificate.path}
+                    alt={certificate.issuer}
+                    width={32}
+                    height={32}
+                    quality={100}
+                  />
+                </div>
+              </div>
+            ))}
+          </HorizontalCard>
+
+          <div className="w-full border-b border-blue-110 pb-8 gap-8 flex flex-col">
+            <div className="justify-between flex">
+              <h2 className="tracking-[2px] text-gray-130 text-xs font-medium items-center flex">
+                RECENT PROJECTS
+              </h2>
+              <Link
+                href="/projects"
+                className="text-xs bg-gradient-to-r from-orange-110 to-orange-120 bg-clip-text text-transparent hover:cursor-pointer"
+              >
+                <Button className="text-sm bg-gradient-to-r from-orange-110 to-orange-120 bg-clip-text text-transparent hover:cursor-pointer">
+                  View All
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex flex-col gap-12">
+              {collabProjectsData.map((project, index) => (
+                <div key={index} className="flex flex-col gap-6">
+                  <div className="relative w-full aspect-[325/202]">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={3000}
+                      height={2000}
+                      quality={100}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="font-semibold text-xl">{project.title}</div>
+                    <div className="text-gray-130">
+                      {project.shortDescription}
+                    </div>
+                    <div className="mt-3">
+                      <Link
+                        href={project.href}
+                        className="text-xs bg-gradient-to-r from-orange-110 to-orange-120 bg-clip-text text-transparent"
+                      >
+                        <Button className="flex items-center gap-2 flex-shrink-0 text-white hover:cursor-pointer">
+                          More Info{" "}
+                          <ArrowRightIcon className="text-white shrink-0" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <HorizontalCard title={"WHAT PEOPLE SAY ABOUT ME"}>
+            {HomeInfo.sayAboutMe.map((about, index) => (
+              <div
+                key={index}
+                className="rounded-lg w-[310px] border border-blue-110 bg-white gap-2.5 flex flex-col p-3 items-start flex-shrink-0 snap-start"
+              >
+                <div className="flex items-center gap-2.5 justify-start">
+                  <div className="rounded-full size-8 overflow-hidden shrink-0">
+                    <Image
+                      src={about.path}
+                      alt={about.name}
+                      width={32}
+                      height={32}
+                      quality={100}
+                    />
+                  </div>
+                  <div>
+                    <div
+                      className="font-medium"
+                      style={{ maxWidth: "20ch", wordWrap: "break-word" }}
+                    >
+                      {about.name}
+                    </div>
+                    <div className="text-xs text-gray-130">
+                      {about.position}, {about.company}
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-xs font-light text-gray-130">
+                  {about.comments}
+                </p>
+              </div>
+            ))}
+          </HorizontalCard>
+          <Contacts title={"CONNECT WITH ME"} />
         </div>
       </motion.div>
     </div>

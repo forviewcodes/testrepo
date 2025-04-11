@@ -64,9 +64,12 @@ export const collabProjectsData = [
     title: "MYDS",
     path: "myds",
     description: "Malaysia Government Design System",
-    image: "/projects/collab/1.png",
+    shortDescription:
+      "MYDS is a unified design system built for Malaysian government digital services. It offers reusable UI components and guidelines to ensure accessibility, responsiveness, and visual consistency. By streamlining development, it speeds up delivery while maintaining compliance with national digital standards.",
+    image: "/projects/collab/myds.png",
     gitHubUrl: "/",
     previewUrl: "/",
+    href: "/projects/myds",
   },
 
   {
@@ -74,18 +77,24 @@ export const collabProjectsData = [
     title: "AskGovMy ",
     path: "askgovmy",
     description: "Malaysia Govenment QnA Hub",
-    image: "/projects/collab/2.png",
+    shortDescription:
+      "MYDS is a unified design system built for Malaysian government digital services. It offers reusable UI components and guidelines to ensure accessibility, responsiveness, and visual consistency. By streamlining development, it speeds up delivery while maintaining compliance with national digital standards.",
+    image: "/projects/collab/askgov.png",
     gitHubUrl: "https://github.com/harrisazmi/Project3NumazuScraper",
     previewUrl: "https://project3frontendcf.harrisviewcodes.uk/",
+    href: "/projects/askgovmy",
   },
   {
     id: 3,
     title: "Directory",
     path: "directory",
     description: "One Directory for whole Government",
-    image: "/projects/collab/3.png",
+    shortDescription:
+      "MYDS is a unified design system built for Malaysian government digital services. It offers reusable UI components and guidelines to ensure accessibility, responsiveness, and visual consistency. By streamlining development, it speeds up delivery while maintaining compliance with national digital standards.",
+    image: "/projects/collab/directory.png",
     gitHubUrl: "https://github.com/harrisazmi/Project1ToDoListFE",
     previewUrl: "https://project1frontendcf.harrisviewcodes.uk/",
+    href: "/projects/directory",
   },
 ];
 
